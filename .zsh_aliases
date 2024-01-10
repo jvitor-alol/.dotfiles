@@ -77,4 +77,4 @@ alias ghistory='history | grep' 	           # history with grep
 # Temp
 alias rhdd='rsync -a --progress /media/jvitor/Portable_HDD/mãe/ /home/jvitor/Public/mãe/'
 alias rpub='rsync -a --progress /home/jvitor/Public/mãe/ /media/jvitor/Portable_HDD/mãe/'
-
+alias py='python3'
