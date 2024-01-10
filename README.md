@@ -10,11 +10,6 @@ Source bashrc
 source ~/.bashrc
 ```
 
-Avoid recursive issues
-```bash
-echo ".dotfiles" >> .gitignore
-```
-
 Clone bare repo
 ```bash
 git clone --bare https://github.com/jvitor-alol/.dotfiles $HOME/.dotfiles
