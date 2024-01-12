@@ -4,12 +4,19 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
-#XDG-Compliance
+#XDG-Ninja recommendations
 export WINEPREFIX="$XDG_DATA_HOME"/wine
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 export WINEPREFIX="$XDG_DATA_HOME"/wine
+export PYTHONSTARTUP="/etc/python/pythonrc"
+export OMNISHARPHOME="$XDG_CONFIG_HOME"/omnisharp
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
+#export ZSH="$XDG_DATA_HOME"/oh-my-zsh				#does not work
 
 # Add ~/Development/bin to PATH
 export PATH=$PATH:$HOME/Development/bin
@@ -25,7 +32,7 @@ export PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH
 export PATH=$PATH:/usr/pgadmin4/bin
 
 # rustup
-. "$HOME/.cargo/env"
+. "$CARGO_HOME/env"
 
 # Add Voldemort folder to ambient variables
 export VOLD=$HOME/Development/senhaseguraLinux

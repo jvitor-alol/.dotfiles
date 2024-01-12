@@ -44,7 +44,7 @@ alias pscpu='ps auxf | sort -nr -k 3'				# processes listed in descending order 
 # Navigation
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ....='cd $HOME'
+alias ....='cd ~'
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first'	# my preferred listing
@@ -65,15 +65,13 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Adding flags & misc.
-alias cp='cp -i'			           # interactive copy
-alias df='df -h'			           # human-readable disk space usage
-alias free='free -m'				   # RAM usage, show sizes in MB
-alias history='history -E'			   # history w/ timestamps
-alias ips='ip -c -br a'			           # human-readable ip list
-alias mkdir='mkdir -pv'			           # create directory structure
-alias ghistory='history | grep'		           # history with grep
-alias py='python3'				   # run python
-
-# XDG-Compliance
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+alias cp='cp -i'			       		   # interactive copy
+alias df='df -h'					   # human-readable disk space usage
+alias free='free -m'					   # RAM usage, show sizes in MB
+alias history='history -E'				   # history w/ timestamps
+alias ips='ip -c -br a'			        	   # human-readable ip list
+alias mkdir='mkdir -pv'			       		   # create directory structure
+alias ghistory='history | grep'		        	   # history with grep
+alias py='python3'					   # run python
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"	   # XDG-Compliance
 
