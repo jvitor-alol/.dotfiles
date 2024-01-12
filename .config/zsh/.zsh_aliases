@@ -68,7 +68,7 @@ alias egrep='egrep --color=auto'
 alias cp='cp -i'			       		   # interactive copy
 alias df='df -h'					   # human-readable disk space usage
 alias free='free -m'					   # RAM usage, show sizes in MB
-alias ghistory='history 1 | grep'		        	   # history with grep
+alias ghistory='history 1 | grep'		       	   # history with grep
 alias history='history -E'				   # history w/ timestamps
 alias ips='ip -c -br a'			        	   # human-readable ip list
 alias mkdir='mkdir -pv'			       		   # create directory structure
