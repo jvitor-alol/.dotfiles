@@ -1,0 +1,22 @@
+live_config_reload = true
+
+[window]
+
+dimensions = { columns = 95, lines = 30 }
+
+opacity = 0.9
+
+padding.x = 10
+padding.y = 0
+
+decorations = "Full"
+decorations_theme_variant = "Light" # "Dark"
+
+[font]
+
+normal = { family = "Cousine Nerd Font", style = "Regular" }
+bold = { style = "Bold" }
+italic = { style = "Italic" }
+bold_italic = { style = "Bold Italic" }
+
+size = 14.0
