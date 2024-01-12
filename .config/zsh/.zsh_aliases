@@ -74,7 +74,6 @@ alias mkdir='mkdir -pv'			           # create directory structure
 alias ghistory='history | grep'		           # history with grep
 alias py='python3'				   # run python
 
-# Temp
-alias rhdd='rsync -a --progress /media/jvitor/Portable_HDD/mãe/ /home/jvitor/Public/mãe/'
-alias rpub='rsync -a --progress /home/jvitor/Public/mãe/ /media/jvitor/Portable_HDD/mãe/'
+# XDG-Compliance
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 

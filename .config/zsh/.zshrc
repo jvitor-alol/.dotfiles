@@ -25,7 +25,7 @@ fi
 zstyle ':omz:update' mode reminder
 
 # Default theme
-ZSH_THEME="af-magic"
+# ZSH_THEME="af-magic"
 
 # Oh My Zsh plugins
 # Add wisely, as too many plugins slow down shell startup.
@@ -39,13 +39,10 @@ plugins=(
 	starship
 )
 
-source $ZSH/oh-my-zsh.sh
+# zcompdump location
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
-# XDG Base Directory (https://wiki.archlinux.org/title/XDG_Base_Directory)
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_CACHE_HOME=$HOME/.cache
-export XDG_DATA_HOME=$HOME/.local/share
-export XDG_STATE_HOME=$HOME/.local/state
+source $ZSH/oh-my-zsh.sh
 
 ######## USER CONFIGURATION ########
 
@@ -81,23 +78,8 @@ ex ()		# usage: ex <file>
   fi
 }
 
-# Aliases
+# My Aliases
 if [ -f $ZDOTDIR/.zsh_aliases ]; then
     . $ZDOTDIR/.zsh_aliases
 fi
 
-# Add ~/Development/bin to PATH
-export PATH=$PATH:$HOME/Development/bin
-
-# Add .NET to PATH
-export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
-
-# Add Linuxbrew to PATH
-export PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH
-
-# Add pgAdmin4 folder to PATH
-export PATH=$PATH:/usr/pgadmin4/bin
-
-# Add Voldemort folder to ambient variables
-export VOLD=$HOME/Development/senhaseguraLinux
