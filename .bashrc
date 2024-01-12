@@ -76,11 +76,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-# sync pastas mãe
-
-alias rhdd='rsync -a --progress /media/jvitor/Portable_HDD/mãe/ /home/jvitor/Public/mãe/'
-alias rpub='rsync -a --progress /home/jvitor/Public/mãe/ /media/jvitor/Portable_HDD/mãe/'
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
