@@ -1,4 +1,4 @@
-# How to migrate a setup
+# Migrating to a new setup
 
 Add bare repo alias to bashrc
 ```console
