@@ -16,9 +16,9 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nano'
+  export EDITOR='nvim'
 else
-  export EDITOR='vim'
+  export EDITOR='nvim'
 fi
 
 # Update reminder
@@ -35,11 +35,11 @@ plugins=(
 	autojump
 	zsh-autosuggestions
 	you-should-use
-	auto-notify
 	starship
+#	auto-notify
 )
 
-# zcompdump location
+# Zcompdump location // doesn't really work with oh-my-zsh installed
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 source $ZSH/oh-my-zsh.sh

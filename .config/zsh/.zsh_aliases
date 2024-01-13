@@ -5,9 +5,9 @@ alias zshconfig='$EDITOR $HOME/.zshrc'		 # edit .zshrc
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # apt
-alias aptupd='sudo apt update'			 # update pkgs
-alias aptupg='sudo apt upgrade -y'	 	 # upgrade pkgs
-alias aptins='sudo apt install'			 # install pkgs
+alias aptu='sudo apt update'			 # update pkgs
+alias aptg='sudo apt upgrade -y'	 	 # upgrade pkgs
+alias apti='sudo apt install'			 # install pkgs
 alias aptarm='sudo apt autoremove'		 # remove no longer needed dependencies
 
 # pacman and yay
@@ -59,10 +59,10 @@ alias cat='batcat'
 # Changing "vim" to "neovim"
 alias vim='nvim'
 
-# Colorize grep output (good for log files)
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+# Changing "grep" to "ripgrep" // Colorize grep output (good for log files)
+alias grep='rg'
+#alias fgrep='fgrep --color=auto'
+#alias egrep='egrep --color=auto'
 
 # Adding flags & misc.
 alias cp='cp -i'			       		   # interactive copy
