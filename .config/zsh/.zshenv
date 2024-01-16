@@ -4,7 +4,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
-#XDG-Ninja recommendations
+# XDG-Ninja recommendations
 export WINEPREFIX="$XDG_DATA_HOME"/wine
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
@@ -18,8 +18,11 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
 #export ZSH="$XDG_DATA_HOME"/oh-my-zsh				#does not work
 
-# Add ~/Development/bin to PATH
-export PATH=$PATH:$HOME/Development/bin
+# User-specific executable files may be stored in $HOME/.local/bin.
+# (https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
+if [ -d "$HOME/.local/bin" ]; then
+    export PATH=$PATH:$HOME/.local/bin
+fi
 
 # Add .NET to PATH
 export DOTNET_ROOT=$HOME/.dotnet
