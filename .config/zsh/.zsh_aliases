@@ -1,5 +1,5 @@
 # zsh customization
-alias zshconfig='$EDITOR $HOME/.zshrc'		 # edit .zshrc
+alias zshconfig='$EDITOR $ZDOTDIR/.zshrc'	 # edit .zshrc
 
 # dotfiles repo git commands
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -31,7 +31,8 @@ alias fetch='git fetch -pv'			 # fetch and prune stale branches, verbose
 alias pull='git pull'				 # pull from remote
 alias push='git push'				 # push to origin
 alias stat='git status'				 # 'status' is protected name so using 'stat' instead
-alias reflog='git reflog'			 # display reflog
+alias reflog='git reflog'			 # displays reflog
+alias glog='git log'				 # displays commit log
 alias tag='git tag'				 # list tags
 alias newtag='git tag -a'			 # create new tag
 
@@ -44,7 +45,7 @@ alias pscpu='ps auxf | sort -nr -k 3'				# processes listed in descending order 
 # Navigation
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ....='cd ~'
+alias ....='cd ../../..'
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first'	# my preferred listing

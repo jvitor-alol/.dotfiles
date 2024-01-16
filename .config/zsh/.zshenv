@@ -1,3 +1,6 @@
+# Add following line to /etc/zsh/zshenv
+export ZDOTDIR=$HOME/.config/zsh
+
 # XDG Base Directory (https://wiki.archlinux.org/title/XDG_Base_Directory)
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
@@ -16,7 +19,7 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
-#export ZSH="$XDG_DATA_HOME"/oh-my-zsh				#does not work
+export ZSH="$XDG_DATA_HOME"/oh-my-zsh
 
 # User-specific executable files may be stored in $HOME/.local/bin.
 # (https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
@@ -34,8 +37,6 @@ export PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH
 # Add pgAdmin4 folder to PATH
 export PATH=$PATH:/usr/pgadmin4/bin
 
-# rustup
-. "$CARGO_HOME/env"
-
 # Add Voldemort folder to ambient variables
 export VOLD=$HOME/Development/senhaseguraLinux
+

@@ -11,9 +11,6 @@
 #|-------------------------------------------------------------------------|#
 #############################################################################
 
-# Path to oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'
@@ -39,10 +36,10 @@ plugins=(
 #	auto-notify
 )
 
-# Zcompdump location // doesn't really work with oh-my-zsh installed
-compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
-
 source $ZSH/oh-my-zsh.sh
+
+# Zcompdump location // doesn't really work with oh-my-zsh installed
+# compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 ######## USER CONFIGURATION ########
 
@@ -77,6 +74,9 @@ ex ()		# usage: ex <file>
     echo "'$1' is not a valid file"
   fi
 }
+
+# Rustup.rs source cargo 
+. $CARGO_HOME/env
 
 # My Aliases
 if [ -f $ZDOTDIR/.zsh_aliases ]; then
