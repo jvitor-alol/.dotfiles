@@ -1,5 +1,15 @@
 # Migrating to a new setup
 
+Install dependencies
+```console
+sudo apt install neofetch git zsh curl exa fzf ripgrep bat neovim
+```
+
+Add this line to /etc/zsh/zshenv
+```console
+export ZDOTDIR=$HOME/.config/zsh
+```
+
 Add bare repo alias to bashrc
 ```console
 echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.bashrc
