@@ -34,19 +34,8 @@ if [ -d "$HOME/.local/bin" ]; then
     export PATH=$PATH:$HOME/.local/bin
 fi
 
-# Add .NET to PATH
-#export DOTNET_ROOT=$HOME/.dotnet
-#export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
-
 # Add Linuxbrew to PATH
-export PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH
-
-# Add pgAdmin4 folder to PATH
-#export PATH=$PATH:/usr/pgadmin4/bin
+#export PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH
 
 # Add Voldemort folder to ambient variables
-export VOLD=$HOME/Development/senhaseguraLinux
-
-# Add pip from asdf install
-export PATH="$ASDF_DIR"/installs/python/3.12.1/bin:$PATH
-
+#export VOLD=$HOME/Development/senhaseguraLinux
