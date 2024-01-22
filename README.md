@@ -22,7 +22,7 @@ source ~/.bashrc
 
 Clone bare repo
 ```bash
-git clone --bare https://github.com/jvitor-alol/.dotfiles $HOME/.dotfiles
+git clone --bare git@github.com:jvitor-alol/.dotfiles.git $HOME/.dotfiles
 ```
 
 Force checkout
