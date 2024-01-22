@@ -32,6 +32,7 @@ plugins=(
 	autojump
 	zsh-autosuggestions
 	you-should-use
+	asdf
 #	starship
 #	auto-notify
 )

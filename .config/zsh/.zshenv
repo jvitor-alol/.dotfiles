@@ -22,6 +22,12 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
 export ZSH="$XDG_DATA_HOME"/oh-my-zsh
 
+# ASDF installation
+export ASDF_DIR="$XDG_DATA_HOME"/asdf
+export ASDF_DATA_DIR="$ASDF_DIR"
+export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME"/asdf/.asdfrc
+export ASDF_DEFAULT_TOOL_VERSIONS_FILENAME=.config/asdf/tool_versions
+
 # User-specific executable files may be stored in $HOME/.local/bin.
 # (https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
 if [ -d "$HOME/.local/bin" ]; then
@@ -29,15 +35,18 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 
 # Add .NET to PATH
-export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
+#export DOTNET_ROOT=$HOME/.dotnet
+#export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
 
 # Add Linuxbrew to PATH
 export PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH
 
 # Add pgAdmin4 folder to PATH
-export PATH=$PATH:/usr/pgadmin4/bin
+#export PATH=$PATH:/usr/pgadmin4/bin
 
 # Add Voldemort folder to ambient variables
 export VOLD=$HOME/Development/senhaseguraLinux
+
+# Add pip from asdf install
+export PATH="$ASDF_DIR"/installs/python/3.12.1/bin:$PATH
 
