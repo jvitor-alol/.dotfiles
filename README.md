@@ -25,14 +25,35 @@ Clone bare repo
 git clone --bare git@github.com:jvitor-alol/.dotfiles.git $HOME/.dotfiles
 ```
 
+Run this command
+```bash
+config config --edit
+```
+
+And add the the following lines to the configuration file
+```toml
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+[status]
+	showUntrackedFiles = no
+[remote "origin"]
+	url = git@github.com:jvitor-alol/.dotfiles.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+```
+
+Fetch branches
+```bash
+config fetch
+```
+
 Force checkout
 ```bash
 config checkout -f
-```
-
-Hide untracked files
-```bash
-config config --local status.showUntrackedFiles no
 ```
 
 ## References
