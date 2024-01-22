@@ -1,32 +1,60 @@
 # Migrating to a new setup
 
-Install dependencies
+## Installing dependencies
+
+Run the following line for Debian-based distributions
 ```console
-sudo apt install neofetch git zsh curl exa fzf ripgrep bat neovim
+sudo apt install neofetch git zsh curl exa fzf ripgrep bat neovim build-essential
 ```
 
-Add this line to /etc/zsh/zshenv
+[Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
+```console
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+OMZ Plugins
+```console
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+```
+
+Install [Starship Prompt](https://starship.rs/guide/#%F0%9F%9A%80-installation)
+```console
+curl -sS https://starship.rs/install.sh | sh
+```
+
+## Cloning dotfiles
+
+Add bare repo alias to bashrc **OR** zshrc
+```console
+echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.bashrc
+```
+```console
+echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.zshrc
+```
+
+Source bashrc **OR** zshrc
+```console
+source ~/.bashrc
+```
+```console
+source ~/.zshrc
+```
+
+Clone bare repo
+```console
+git clone --bare git@github.com:jvitor-alol/.dotfiles.git $HOME/.dotfiles
+```
+
+Append this line to /etc/zsh/zshenv
 ```console
 export ZDOTDIR=$HOME/.config/zsh
 ```
 
-Add bare repo alias to bashrc
-```console
-echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.bashrc
-```
-
-Source bashrc
-```bash
-source ~/.bashrc
-```
-
-Clone bare repo
-```bash
-git clone --bare git@github.com:jvitor-alol/.dotfiles.git $HOME/.dotfiles
-```
-
 Run this command
-```bash
+```console
 config config --edit
 ```
 
@@ -47,13 +75,22 @@ And add the the following lines to the configuration file
 ```
 
 Fetch branches
-```bash
+```console
 config fetch
 ```
 
 Force checkout
-```bash
+```console
 config checkout -f
+```
+
+## Check for XDG compliant HOME
+
+Install [XDG-Ninja](https://github.com/b3nj5m1n/xdg-ninja) and add it to PATH
+```console
+git clone https://github.com/b3nj5m1n/xdg-ninja.git $XDG_DATA_HOME
+mkdir ~/.local/bin
+cp $XDG_DATA_HOME/xdg-ninja/xdg-ninja.sh .local/bin/xdg-ninja 
 ```
 
 ## References
