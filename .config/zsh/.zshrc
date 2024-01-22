@@ -33,8 +33,6 @@ plugins=(
 	zsh-autosuggestions
 	you-should-use
 	asdf
-#	starship
-#	auto-notify
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -80,9 +78,6 @@ ex ()		# usage: ex <file>
     echo "'$1' is not a valid file"
   fi
 }
-
-# Rustup.rs source cargo 
-. $CARGO_HOME/env
 
 # My Aliases
 if [ -f $ZDOTDIR/.zsh_aliases ]; then
