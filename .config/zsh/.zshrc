@@ -32,7 +32,7 @@ plugins=(
 	autojump
 	zsh-autosuggestions
 	you-should-use
-	starship
+#	starship
 #	auto-notify
 )
 
@@ -44,7 +44,12 @@ source $ZSH/oh-my-zsh.sh
 ######## USER CONFIGURATION ########
 
 # Zsh history
-export HISTFILE=$XDG_STATE_HOME/zsh/history
+if [ ! -d "$XDG_STATE_HOME/zsh" ]; then
+	mkdir -p $XDG_STATE_HOME/zsh
+fi
+if [ ! -e "$HISTFILE" ]; then
+	touch "$HISTFILE"
+fi
 HISTSIZE=4096
 SAVEHIST=4096
 setopt appendhistory
@@ -82,4 +87,7 @@ ex ()		# usage: ex <file>
 if [ -f $ZDOTDIR/.zsh_aliases ]; then
     . $ZDOTDIR/.zsh_aliases
 fi
+
+# Starship Prompt
+eval "$(starship init zsh)"
 

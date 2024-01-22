@@ -8,6 +8,7 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
 # XDG-Ninja recommendations
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export WINEPREFIX="$XDG_DATA_HOME"/wine
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"

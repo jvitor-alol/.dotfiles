@@ -138,3 +138,5 @@ export VOLD=$HOME/Development/senhaseguraLinux
 
 #alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 . "$CARGO_HOME/env"
+alias config='/usr/bin/git --git-dir=/home/jvitor/.dotfiles --work-tree=/home/jvitor'
+
