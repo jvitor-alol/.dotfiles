@@ -24,8 +24,8 @@ export ZSH="$XDG_DATA_HOME"/oh-my-zsh
 # ASDF installation
 export ASDF_DIR="$XDG_DATA_HOME"/asdf
 export ASDF_DATA_DIR="$XDG_DATA_HOME"/asdf
-export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME"/asdf/.asdfrc
-export ASDF_DEFAULT_TOOL_VERSIONS_FILENAME=.config/asdf/tool_versions
+#export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME"/asdf/.asdfrc
+#export ASDF_DEFAULT_TOOL_VERSIONS_FILENAME=.config/asdf/tool_versions
 
 # User-specific executable files may be stored in $HOME/.local/bin.
 # (https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
