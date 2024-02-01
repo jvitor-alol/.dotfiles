@@ -19,6 +19,7 @@ export OMNISHARPHOME="$XDG_CONFIG_HOME"/omnisharp
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export ZSH="$XDG_DATA_HOME"/oh-my-zsh
 
 # ASDF installation
