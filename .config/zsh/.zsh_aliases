@@ -73,7 +73,7 @@ alias free='free -m'					   # RAM usage, show sizes in MB
 alias ghistory='history 1 | rg'			       	   # history with ripgrep
 alias history='history -E'				   # history w/ timestamps
 alias ips='ip -c -br a'			        	   # human-readable ip list
+alias ip='ip -color=auto'				   # ip highlight
 alias mkdir='mkdir -pv'			       		   # create directory structure
 alias py='python3'					   # run python
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"	   # XDG-Compliance
-
+alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'   # XDG-Compliance
