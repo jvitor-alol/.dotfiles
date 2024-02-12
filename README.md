@@ -9,8 +9,8 @@ sudo apt install neofetch git zsh curl exa fzf ripgrep bat neovim build-essentia
 
 Run the following line for Arch Linux
 ```console
-sudo pacman -Syu git zsh curl exa fzf bat ripgrep \
-nano vim neovim neofetch firefox steam qbittorrent \
+sudo pacman -Syu git zsh curl exa fzf bat ripgrep bashtop \
+nano vim neovim neofetch firefox steam qbittorrent cmatrix \
 zip unzip base-devel devtools openssh docker docker-compose
 ```
 
