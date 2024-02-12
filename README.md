@@ -12,7 +12,7 @@ Run the following line for Arch Linux
 sudo pacman -Syu neofetch git zsh curl exa fzf ripgrep bat neovim base-devel devtools
 ```
 
-Install yay for AUR
+Install [yay](https://github.com/Jguer/yay) for [AUR](https://aur.archlinux.org/)
 ```console
 git clone https://aur.archlinux.org/yay.git;
 cd yay;
@@ -32,7 +32,7 @@ git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 ```
 
-ASDF plugins
+[ASDF](https://github.com/asdf-vm/asdf) plugins
 ```console
 asdf plugin-add python;
 asdf plugin-add rust;
