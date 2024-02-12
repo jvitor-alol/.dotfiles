@@ -20,6 +20,7 @@ export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export ZSH="$XDG_DATA_HOME"/oh-my-zsh
 
 # ASDF installation
@@ -34,7 +35,3 @@ if [ -d "$HOME/.local/bin" ]; then
     export PATH=$PATH:$HOME/.local/bin
 fi
 
-# Add Linuxbrew to PATH
-if [ -d "/home/linuxbrew" ]; then
-    export PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH
-fi

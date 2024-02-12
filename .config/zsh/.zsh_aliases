@@ -58,7 +58,7 @@ alias lt='exa -aT --icons --color=always --group-directories-first'	# tree listi
 alias l.='exa -a | rg "^\."'						# dotfiles
 
 # Changing "cat" to "bat"
-alias cat='batcat'
+alias cat='bat'
 
 # Changing "vim" to "neovim"
 alias vim='nvim'
