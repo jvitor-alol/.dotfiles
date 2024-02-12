@@ -32,6 +32,14 @@ git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 ```
 
+ASDF plugins
+```console
+asdf plugin-add python;
+asdf plugin-add rust;
+asdf plugin-add dotnet;
+asdf install
+```
+
 Install [Starship Prompt](https://starship.rs/guide/#%F0%9F%9A%80-installation)
 ```console
 curl -sS https://starship.rs/install.sh | sh
