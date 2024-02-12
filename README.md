@@ -9,7 +9,9 @@ sudo apt install neofetch git zsh curl exa fzf ripgrep bat neovim build-essentia
 
 Run the following line for Arch Linux
 ```console
-sudo pacman -Syu neofetch git zsh curl exa fzf ripgrep bat neovim base-devel devtools
+sudo pacman -Syu git zsh curl exa fzf bat ripgrep \
+nano vim neovim neofetch firefox steam qbittorrent \
+zip unzip base-devel devtools openssh docker docker-compose
 ```
 
 Install [yay](https://github.com/Jguer/yay) for [AUR](https://aur.archlinux.org/)
@@ -17,6 +19,11 @@ Install [yay](https://github.com/Jguer/yay) for [AUR](https://aur.archlinux.org/
 git clone https://aur.archlinux.org/yay.git;
 cd yay;
 makepkg -si
+```
+
+Install AUR packages
+```console
+yay -Sua --noconfirm alacritty-git autojump xdg-ninja vscodium-bin
 ```
 
 [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
