@@ -4,7 +4,7 @@ alias aliasconfig='$EDITOR $ZDOTDIR/.zsh_aliases'		# edit .zsh_aliases
 alias envconfig='$EDITOR $ZDOTDIR/.zshenv'			# edit .zshenv
 alias starconfig='$EDITOR $XDG_CONFIG_HOME/starship.toml'	# edit starship.toml
 
-# dotfiles repo git commands
+# dotfiles git command
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # apt
@@ -16,8 +16,8 @@ alias aptarm='sudo apt autoremove'		 # remove no longer needed dependencies
 # pacman and yay
 alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
 alias pacsyyu='sudo pacman -Syyu'                # Refresh pkglist & update standard pkgs
-alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
-alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
+alias yaysua='yay -Sua --noconfirm'		 # update only AUR pkgs
+alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages (DANGEROUS!)
 
@@ -62,6 +62,9 @@ alias cat='bat'
 
 # Changing "vim" to "neovim"
 alias vim='nvim'
+
+# Changing "code" to "codium"
+alias code='codium'
 
 # Changing "grep" to "ripgrep" // Colorize grep output (good for log files)
 alias grep='rg'
