@@ -7,6 +7,18 @@ Run the following line for Debian-based distributions
 sudo apt install neofetch git zsh curl exa fzf ripgrep bat neovim build-essential
 ```
 
+Run the following line for Arch Linux
+```console
+sudo pacman -Syu neofetch git zsh curl exa fzf ripgrep bat neovim base-devel devtools
+```
+
+Install yay for AUR
+```console
+git clone https://aur.archlinux.org/yay.git;
+cd yay;
+makepkg -si
+```
+
 [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
 ```console
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -14,9 +26,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 OMZ Plugins
 ```console
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting;
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions;
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use;
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 ```
 
@@ -86,7 +98,12 @@ config checkout -f
 
 ## Check for XDG compliant HOME
 
-Install [XDG-Ninja](https://github.com/b3nj5m1n/xdg-ninja) and add it to PATH
+Install [XDG-Ninja](https://github.com/b3nj5m1n/xdg-ninja) (AUR)
+```console
+yaysyu xdg-ninja
+```
+
+Install XDG-Ninja and add it to PATH (Other distros)
 ```console
 git clone https://github.com/b3nj5m1n/xdg-ninja.git $XDG_DATA_HOME
 mkdir ~/.local/bin
