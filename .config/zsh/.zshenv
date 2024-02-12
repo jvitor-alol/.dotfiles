@@ -21,6 +21,7 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
 export ZSH="$XDG_DATA_HOME"/oh-my-zsh
 
 # ASDF installation
