@@ -11,7 +11,8 @@ Run the following line for Arch Linux
 ```console
 sudo pacman -Syu git zsh curl exa fzf bat ripgrep bashtop \
 nano vim neovim neofetch firefox steam qbittorrent cmatrix \
-zip unzip base-devel devtools openssh docker docker-compose
+zip unzip base-devel devtools openssh docker docker-compose \
+flatpak flatpak-builder ufw
 ```
 
 Install [yay](https://github.com/Jguer/yay) for [AUR](https://aur.archlinux.org/)
@@ -23,7 +24,7 @@ makepkg -si
 
 Install AUR packages
 ```console
-yay -Sua --noconfirm alacritty-git autojump xdg-ninja vscodium-bin
+yay -Sua --noconfirm alacritty-git autojump xdg-ninja vscodium-bin duf libreoffice-still
 ```
 
 [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
