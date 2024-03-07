@@ -1,3 +1,5 @@
 dotnet 8.0.101 7.0.405
 python 3.12.1 3.10.13 system
 rust stable
+java adoptopenjdk-21.0.2+13.0.LTS adoptopenjdk-11.0.19+7
+spark 3.5.1
