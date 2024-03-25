@@ -1,0 +1,32 @@
+{
+	"main boilerplate": {
+		"prefix": "main",
+		"body": [
+			"def main() -> None:",
+			"\tpass",
+			"",
+			"if __name__ == '__main__':",
+			"\tmain()"
+		],
+		"description": "Create a main function in Python"
+	},
+	"logging snippet": {
+		"prefix": "logs",
+		"body": [
+			"from datetime import datetime",
+			"import logging",
+			"",
+			"logging.basicConfig(",
+			"\tlevel=logging.INFO,",
+			"\tformat='%(asctime)s %(module)s %(levelname)s: %(message)s',",
+			"\tdatefmt='%Y/%m/%d %I:%M:%S %p %z',",
+			"\thandlers=[",
+			"\t\tlogging.FileHandler(f'./logs/{datetime.now().strftime(\"%Y-%m-%d_%H%M%S\")}.log'),",
+			"\t\tlogging.StreamHandler()",
+			"\t]",
+			")",
+			"logger = logging.getLogger(__name__)"
+		],
+		"description": "Configure logging in Python"
+	}
+}
