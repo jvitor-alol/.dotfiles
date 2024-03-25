@@ -1,6 +1,6 @@
 {
-	"main boilerplate": {
-		"prefix": "main",
+	"Main Function Boilerplate": {
+		"prefix": "!main",
 		"body": [
 			"def main() -> None:",
 			"\tpass",
@@ -8,10 +8,10 @@
 			"if __name__ == '__main__':",
 			"\tmain()"
 		],
-		"description": "Create a main function in Python"
+		"description": "Generate a main function"
 	},
-	"logging snippet": {
-		"prefix": "logs",
+	"Logging Configuration": {
+		"prefix": "!logs",
 		"body": [
 			"from datetime import datetime",
 			"import logging",
@@ -27,6 +27,32 @@
 			")",
 			"logger = logging.getLogger(__name__)"
 		],
-		"description": "Configure logging in Python"
+		"description": "Configure logging setup"
+	},
+	"Open File Context": {
+		"prefix": "!open",
+		"body": [
+			"filepath = '${1:filepath}'",
+			"",
+			"with open(filepath, mode='${2:mode}', encoding='utf-8') as file:",
+			"\t${3:pass}"
+		],
+		"description": "Snippet to open a file context"
+	},
+	"Function Definition": {
+		"prefix": "!def",
+		"body": [
+			"def ${1:function_name}(${2:parameters}, ${3:*args, **kwargs}) -> ${4:returns}:",
+			"\t${5:pass}"
+		],
+		"description": "Create a new function"
+	},
+	"For Loop": {
+		"prefix": "!for",
+		"body": [
+			"for ${1:item} in ${2:iterable}:",
+			"\t${3:pass}"
+		],
+		"description": "For loop structure"
 	}
 }
