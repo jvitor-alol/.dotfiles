@@ -5,8 +5,10 @@
 			"def main() -> None:",
 			"\tpass",
 			"",
+			"",
 			"if __name__ == '__main__':",
-			"\tmain()"
+			"\tmain()",
+			""
 		],
 		"description": "Generate a main function"
 	},
@@ -21,11 +23,13 @@
 			"\tformat='%(asctime)s %(module)s %(levelname)s: %(message)s',",
 			"\tdatefmt='%Y/%m/%d %I:%M:%S %p %z',",
 			"\thandlers=[",
-			"\t\tlogging.FileHandler(f'./logs/{datetime.now().strftime(\"%Y-%m-%d_%H%M%S\")}.log'),",
+			"\t\tlogging.FileHandler(",
+			"\t\t\tf'./logs/{datetime.now().strftime(\"%Y-%m-%d_%H%M%S\")}.log'),",
 			"\t\tlogging.StreamHandler()",
 			"\t]",
 			")",
-			"logger = logging.getLogger(__name__)"
+			"logger = logging.getLogger(__name__)",
+			""
 		],
 		"description": "Configure logging setup"
 	},
@@ -42,7 +46,7 @@
 	"Function Definition": {
 		"prefix": "!def",
 		"body": [
-			"def ${1:function_name}(${2:parameters}, ${3:*args, **kwargs}) -> ${4:returns}:",
+			"def ${1:function_name}(${2:parameters}, ${3:*args, **kwargs}) -> ${4:None}:",
 			"\t${5:pass}"
 		],
 		"description": "Create a new function"
@@ -54,5 +58,25 @@
 			"\t${3:pass}"
 		],
 		"description": "For loop structure"
-	}
+	},
+	"ASCII Art": {
+		"prefix": "!ascii",
+		"body": [
+			"\"\"\"",
+			"###########################################################################",
+			"|----------__-------------------------------------------------------------|",
+			"|---------|  \\------------------------------------------------------------|",
+			"|---------| ▓▓____   ______   _______  _______ __    __ _______-----------|",
+			"|---------| ▓▓    \\ /      \\ /       \\/       \\  \\  |  \\       \\----------|",
+			"|---------| ▓▓▓▓▓▓▓\\  ▓▓▓▓▓▓\\  ▓▓▓▓▓▓▓  ▓▓▓▓▓▓▓ ▓▓  | ▓▓ ▓▓▓▓▓▓▓\\---------|",
+			"|---------| ▓▓  | ▓▓ ▓▓  | ▓▓\\▓▓    \\ \\▓▓    \\| ▓▓  | ▓▓ ▓▓  | ▓▓---------|",
+			"|---------| ▓▓__/ ▓▓ ▓▓__/ ▓▓_\\▓▓▓▓▓▓\\_\\▓▓▓▓▓▓\\ ▓▓__/ ▓▓ ▓▓  | ▓▓---------|",
+			"|---------| ▓▓    ▓▓\\▓▓    ▓▓       ▓▓       ▓▓\\▓▓    ▓▓ ▓▓  | ▓▓---------|",
+			"|----------\\▓▓▓▓▓▓▓  \\▓▓▓▓▓▓ \\▓▓▓▓▓▓▓ \\▓▓▓▓▓▓▓  \\▓▓▓▓▓▓ \\▓▓   \\▓▓---------|",
+			"|-------------------------------------------------------------------------|",
+			"###########################################################################",
+			"\"\"\""
+		],
+		"description": "ASCII Art"
+	}	
 }
