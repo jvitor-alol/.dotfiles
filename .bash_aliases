@@ -3,7 +3,7 @@ alias bashconfig='$EDITOR ~/.bashrc'	 		# edit .zshrc
 alias aliasconfig='$EDITOR ~/.bash_aliases'		# edit .zsh_aliases
 
 # dotfiles git command
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # apt
 alias aptu='sudo apt update'			 # update pkgs
