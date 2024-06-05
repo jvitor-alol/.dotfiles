@@ -42,9 +42,12 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 
 [ASDF](https://github.com/asdf-vm/asdf) plugins
 ```console
-asdf plugin-add python;
-asdf plugin-add rust;
-asdf plugin-add dotnet;
+asdf plugin add python;
+asdf plugin add rust;
+asdf plugin add dotnet;
+asdf plugin add nodejs;
+asdf plugin add spark;
+asdf plugin add java;
 asdf install
 ```
 
@@ -57,10 +60,10 @@ curl -sS https://starship.rs/install.sh | sh
 
 Add bare repo alias to bashrc **OR** zshrc
 ```console
-echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.bashrc
+echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.bashrc
 ```
 ```console
-echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.zshrc
+echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.zshrc
 ```
 
 Source bashrc **OR** zshrc
@@ -81,9 +84,10 @@ Append this line to /etc/zsh/zshenv
 export ZDOTDIR=$HOME/.config/zsh
 ```
 
-Run this command
+Run these commands
 ```console
-config config --edit
+dotfiles remote set-head origin main;
+dotfiles config --edit
 ```
 
 And add the the following lines to the configuration file
@@ -104,12 +108,12 @@ And add the the following lines to the configuration file
 
 Fetch branches
 ```console
-config fetch
+dotfiles fetch
 ```
 
 Force checkout
 ```console
-config checkout -f
+dotfiles checkout -f
 ```
 
 ## Check for XDG compliant HOME
