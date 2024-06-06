@@ -2,6 +2,8 @@
 	"Main Function Boilerplate": {
 		"prefix": "!main",
 		"body": [
+			"#!/usr/bin/env python",
+			"",
 			"def main() -> None:",
 			"\tpass",
 			"",
