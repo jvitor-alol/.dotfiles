@@ -46,7 +46,6 @@ asdf plugin add python;
 asdf plugin add rust;
 asdf plugin add dotnet;
 asdf plugin add nodejs;
-asdf plugin add spark;
 asdf plugin add java;
 asdf install
 ```
