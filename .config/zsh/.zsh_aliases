@@ -60,8 +60,8 @@ alias l.='exa -a | rg "^\."'						# dotfiles
 # Changing "cat" to "bat"
 alias cat='bat'
 
-# Changing "vim" to "neovim"
-alias vim='nvim'
+# Changing "vim" to "lunarvim"
+alias vim='lvim'
 
 # Changing "code" to "codium"
 alias code='codium'
