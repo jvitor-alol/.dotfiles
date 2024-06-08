@@ -17,7 +17,7 @@ normal = { family = "Cousine Nerd Font", style = "Regular" }
 bold = { style = "Bold" }
 italic = { style = "Italic" }
 bold_italic = { style = "Bold Italic" }
-size = 12.0
+size = 14.0
 
 [selection]
 save_to_clipboard = true
