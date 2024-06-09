@@ -1,4 +1,29 @@
 {
     "workbench.colorTheme": "Tokyo Night",
-    "workbench.iconTheme": "simple-icons"
+    "workbench.iconTheme": "simple-icons",
+    "editor.formatOnSave": true,
+    "explorer.confirmDragAndDrop": false,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.rulers": [
+            79
+        ]
+    },
+    "[css]": {
+        "editor.rulers": [
+            {
+                "column": 100,
+                "color": "#fff"
+            }
+        ]
+    },
+    "[git-commit]": {
+        "editor.rulers": [
+            80
+        ]
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "explorer.confirmDelete": false,
 }
