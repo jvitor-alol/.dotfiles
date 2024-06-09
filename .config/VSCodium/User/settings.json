@@ -1,16 +1,18 @@
 {
-  "workbench.colorTheme": "Tokyo Night Horizon (Syntax, Dark+ V2)",
+  "workbench.colorTheme": "Tokyo Night",
   "workbench.iconTheme": "simple-icons",
   "workbench.startupEditor": "none",
   "editor.formatOnSave": true,
   "editor.wordWrap": "on",
   "editor.fontSize": 18,
+  "editor.linkedEditing": true,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.openRepositoryInParentFolders": "always",
   "git.ignoreRebaseWarning": true,
+  "liveServer.settings.donotShowInfoMsg": true,
   "files.autoSave": "onWindowChange",
   "auto-close-tag.activationOnLanguage": [
     "xml",
@@ -25,11 +27,18 @@
   "files.associations": {
     "*.toml": "toml"
   },
+  "pylint.args": [
+    "--disable=C0116",
+    "--disable=C0114"
+  ],
   "[python]": {
     "editor.formatOnType": true,
     "editor.defaultFormatter": "ms-python.autopep8",
     "editor.formatOnSave": true,
-    "editor.rulers": [79, 120]
+    "editor.rulers": [
+      79,
+      120
+    ]
   },
   "[css]": {
     "editor.rulers": [
@@ -40,7 +49,10 @@
     ]
   },
   "[git-commit]": {
-    "editor.rulers": [50, 72]
+    "editor.rulers": [
+      50,
+      72
+    ]
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
