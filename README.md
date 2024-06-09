@@ -129,6 +129,18 @@ mkdir ~/.local/bin
 cp $XDG_DATA_HOME/xdg-ninja/xdg-ninja.sh .local/bin/xdg-ninja 
 ```
 
+## VSCodium extensions
+
+To list installed extensions
+```console
+code --list-extensions > extensions.txt
+```
+
+To install a extension
+```console
+code --install-extension <ext-id | path>
+```
+
 ## References
 
 [GitHub does dotfiles](https://dotfiles.github.io/)

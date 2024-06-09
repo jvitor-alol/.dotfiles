@@ -1,0 +1,14 @@
+enkia.tokyo-night
+esbenp.prettier-vscode
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
+laurenttreguier.vscode-simple-icons
+ms-python.autopep8
+ms-python.pylint
+ms-python.python
+njpwerner.autodocstring
+ritwickdey.liveserver
+shd101wyy.markdown-preview-enhanced
+smcpeak.default-keys-windows
+vscode-icons-team.vscode-icons
+yzhang.markdown-all-in-one
