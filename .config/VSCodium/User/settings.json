@@ -6,14 +6,20 @@
   "editor.wordWrap": "on",
   "editor.fontSize": 18,
   "editor.linkedEditing": true,
-  "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
   "git.confirmSync": false,
+  "git.autofetch": "all",
   "git.enableSmartCommit": true,
   "git.openRepositoryInParentFolders": "always",
   "git.ignoreRebaseWarning": true,
   "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.CustomBrowser": "chrome",
   "files.autoSave": "onWindowChange",
+  "files.associations": {
+    "*.toml": "toml"
+  },
   "auto-close-tag.activationOnLanguage": [
     "xml",
     "php",
@@ -24,21 +30,12 @@
     "HTML (EEx)",
     "HTML (Eex)"
   ],
-  "files.associations": {
-    "*.toml": "toml"
-  },
-  "pylint.args": [
-    "--disable=C0116",
-    "--disable=C0114"
-  ],
+  "pylint.args": ["--disable=C0114", "--disable=C0115", "--disable=C0116"],
   "[python]": {
     "editor.formatOnType": true,
     "editor.defaultFormatter": "ms-python.autopep8",
     "editor.formatOnSave": true,
-    "editor.rulers": [
-      79,
-      120
-    ]
+    "editor.rulers": [79, 120]
   },
   "[css]": {
     "editor.rulers": [
@@ -49,10 +46,7 @@
     ]
   },
   "[git-commit]": {
-    "editor.rulers": [
-      50,
-      72
-    ]
+    "editor.rulers": [50, 72]
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
