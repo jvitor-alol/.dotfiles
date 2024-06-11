@@ -38,7 +38,6 @@ alias reflog='git reflog'			 # displays reflog
 alias glog='git log'				 # displays commit log
 alias tag='git tag'				 # list tags
 alias newtag='git tag -a'			 # create new tag
-alias gitsync='fetch; pull --all'		 # fetches and pulls all branches
 
 # ps
 alias psa='ps auxf'						# displays a hierarchical view of running processes
