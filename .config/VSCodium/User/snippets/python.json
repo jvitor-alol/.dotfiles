@@ -17,8 +17,8 @@
 	"Logging Configuration": {
 		"prefix": "!logs",
 		"body": [
-			"from datetime import datetime",
-			"import logging",
+			"if not os.path.exists('./logs'):",
+			"\tos.makedirs('./logs')",
 			"",
 			"logging.basicConfig(",
 			"\tlevel=logging.INFO,",
@@ -48,18 +48,17 @@
 	"Function Definition": {
 		"prefix": "!def",
 		"body": [
-			"def ${1:function_name}(${2:parameters}, ${3:*args, **kwargs}) -> ${4:None}:",
+			"def ${1:function_name}(${2:parameters}${3:, *args, **kwargs}) -> ${4:None}:",
 			"\t${5:pass}"
 		],
 		"description": "Create a new function"
 	},
-	"For Loop": {
-		"prefix": "!for",
+	"Clear Terminal": {
+		"prefix": "!clear",
 		"body": [
-			"for ${1:item} in ${2:iterable}:",
-			"\t${3:pass}"
+			"os.system('cls' if os.name == 'nt' else 'clear')"
 		],
-		"description": "For loop structure"
+		"description": "Clears terminal screen according to operational system"
 	},
 	"ASCII Art": {
 		"prefix": "!ascii",
@@ -80,5 +79,5 @@
 			"\"\"\""
 		],
 		"description": "ASCII Art"
-	}	
+	}
 }
