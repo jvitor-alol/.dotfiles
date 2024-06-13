@@ -87,3 +87,6 @@ fi
 # Starship Prompt
 eval "$(starship init zsh)"
 
+# Set $SPARK_HOME
+source "$ASDF_DIR/plugins/spark/set-spark-home.zsh"
+
