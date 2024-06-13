@@ -11,8 +11,12 @@ Run the following line for Arch Linux
 ```console
 sudo pacman -Syu git zsh curl exa fzf bat ripgrep bashtop \
 nano vim neovim neofetch firefox steam qbittorrent cmatrix \
-zip unzip base-devel devtools openssh docker docker-compose \
-flatpak flatpak-builder ufw
+zip unzip base-devel devtools openssh ufw
+```
+
+Install [LunarVim](https://www.lunarvim.org/docs/installation)
+```console
+LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
 ```
 
 Install [yay](https://github.com/Jguer/yay) for [AUR](https://aur.archlinux.org/)
