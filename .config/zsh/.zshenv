@@ -24,12 +24,6 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
 export ZSH="$XDG_DATA_HOME"/oh-my-zsh
 
-# ASDF installation
-export ASDF_DIR="$XDG_DATA_HOME"/asdf
-export ASDF_DATA_DIR="$XDG_DATA_HOME"/asdf
-export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME"/asdf/asdfrc # Known bug https://github.com/asdf-vm/asdf/issues/1711 
-#export ASDF_DEFAULT_TOOL_VERSIONS_FILENAME=.config/asdf/tool_versions
-
 # User-specific executable files may be stored in $HOME/.local/bin.
 # (https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
 if [ -d "$HOME/.local/bin" ]; then
