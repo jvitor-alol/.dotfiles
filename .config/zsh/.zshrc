@@ -13,9 +13,9 @@
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
+  export EDITOR='lvim'
 else
-  export EDITOR='nvim'
+  export EDITOR='lvim'
 fi
 
 # Update reminder
@@ -86,7 +86,4 @@ fi
 
 # Starship Prompt
 eval "$(starship init zsh)"
-
-# Set $SPARK_HOME
-source "$ASDF_DIR/plugins/spark/set-spark-home.zsh"
 
