@@ -7,6 +7,7 @@ alias starconfig='$EDITOR $XDG_CONFIG_HOME/starship.toml'                       
 # dotfiles git commands
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'              # git for dotfiles repo
 alias dotstat='dotfiles status'                                                         # git status (dotfiles)
+alias dotall='dotfiles branch -vva'                                                     # git branch -vv -a (dotfiles)
 alias dotadd='dotfiles add'                                                             # git add (dotfiles)
 alias dotupdate='dotfiles commit -am'                                                   # git add -u & git commit -m (dotfiles)
 alias dotsync='dotfiles pull'                                                           # git pull (dotfiles)
