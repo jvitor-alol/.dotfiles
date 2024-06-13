@@ -4,7 +4,7 @@ live_config_reload = true
 program = "/usr/bin/zsh"
 
 [window]
-dimensions = { columns = 80, lines = 26 }
+dimensions = { columns = 95, lines = 30 }
 opacity = 0.9
 padding.x = 15
 padding.y = 0
