@@ -7,6 +7,26 @@ Run the following line for Debian-based distributions
 sudo apt install neofetch git zsh curl exa fzf ripgrep bat neovim build-essential
 ```
 
+Run the following line for Arch Linux
+```console
+sudo pacman -Syu git zsh curl exa fzf bat ripgrep bashtop \
+nano vim neovim neofetch firefox steam qbittorrent cmatrix \
+zip unzip base-devel devtools openssh docker docker-compose \
+flatpak flatpak-builder ufw
+```
+
+Install [yay](https://github.com/Jguer/yay) for [AUR](https://aur.archlinux.org/)
+```console
+git clone https://aur.archlinux.org/yay.git;
+cd yay;
+makepkg -si
+```
+
+Install AUR packages
+```console
+yay -Sua --noconfirm alacritty-git autojump xdg-ninja vscodium-bin duf libreoffice-still
+```
+
 [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
 ```console
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -14,10 +34,20 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 OMZ Plugins
 ```console
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting;
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions;
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use;
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+```
+
+[ASDF](https://github.com/asdf-vm/asdf) plugins
+```console
+asdf plugin add python;
+asdf plugin add rust;
+asdf plugin add dotnet;
+asdf plugin add nodejs;
+asdf plugin add java;
+asdf install
 ```
 
 Install [Starship Prompt](https://starship.rs/guide/#%F0%9F%9A%80-installation)
@@ -29,10 +59,10 @@ curl -sS https://starship.rs/install.sh | sh
 
 Add bare repo alias to bashrc **OR** zshrc
 ```console
-echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.bashrc
+echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.bashrc
 ```
 ```console
-echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.zshrc
+echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.zshrc
 ```
 
 Source bashrc **OR** zshrc
@@ -53,9 +83,10 @@ Append this line to /etc/zsh/zshenv
 export ZDOTDIR=$HOME/.config/zsh
 ```
 
-Run this command
+Run these commands
 ```console
-config config --edit
+dotfiles remote set-head origin main;
+dotfiles config --edit
 ```
 
 And add the the following lines to the configuration file
@@ -76,21 +107,38 @@ And add the the following lines to the configuration file
 
 Fetch branches
 ```console
-config fetch
+dotfiles fetch
 ```
 
 Force checkout
 ```console
-config checkout -f
+dotfiles checkout -f
 ```
 
 ## Check for XDG compliant HOME
 
-Install [XDG-Ninja](https://github.com/b3nj5m1n/xdg-ninja) and add it to PATH
+Install [XDG-Ninja](https://github.com/b3nj5m1n/xdg-ninja) (AUR)
+```console
+yaysyu xdg-ninja
+```
+
+Install XDG-Ninja and add it to PATH (Other distros)
 ```console
 git clone https://github.com/b3nj5m1n/xdg-ninja.git $XDG_DATA_HOME
 mkdir ~/.local/bin
 cp $XDG_DATA_HOME/xdg-ninja/xdg-ninja.sh .local/bin/xdg-ninja 
+```
+
+## VSCodium extensions
+
+To list installed extensions
+```console
+code --list-extensions > extensions.txt
+```
+
+To install a extension
+```console
+code --install-extension <ext-id | path>
 ```
 
 ## References

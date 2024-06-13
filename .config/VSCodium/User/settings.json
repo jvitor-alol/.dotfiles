@@ -1,0 +1,58 @@
+{
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "simple-icons",
+  "workbench.startupEditor": "none",
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "editor.fontSize": 18,
+  "editor.linkedEditing": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "git.confirmSync": false,
+  "git.autofetch": "all",
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "always",
+  "git.ignoreRebaseWarning": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "chromium --new-window",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "files.autoSave": "onWindowChange",
+  "files.associations": {
+    "*.toml": "toml"
+  },
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "HTML (EEx)",
+    "HTML (Eex)"
+  ],
+  "pylint.args": ["--disable=C0114", "--disable=C0115", "--disable=C0116"],
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.formatOnSave": true,
+    "editor.rulers": [79, 120]
+  },
+  "[css]": {
+    "editor.rulers": [
+      {
+        "column": 100,
+        "color": "#000"
+      }
+    ]
+  },
+  "[git-commit]": {
+    "editor.rulers": [50, 72]
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
+}

@@ -1,8 +1,6 @@
-# zsh customization
-alias zshconfig='$EDITOR $ZDOTDIR/.zshrc'	 		# edit .zshrc
-alias aliasconfig='$EDITOR $ZDOTDIR/.zsh_aliases'		# edit .zsh_aliases
-alias envconfig='$EDITOR $ZDOTDIR/.zshenv'			# edit .zshenv
-alias starconfig='$EDITOR $XDG_CONFIG_HOME/starship.toml'	# edit starship.toml
+# bash customization
+alias bashconfig='$EDITOR ~/.bashrc'	 		# edit .zshrc
+alias aliasconfig='$EDITOR ~/.bash_aliases'		# edit .zsh_aliases
 
 # dotfiles git command
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -57,11 +55,11 @@ alias ll='exa -l --icons --color=always --group-directories-first'	# long format
 alias lt='exa -aT --icons --color=always --group-directories-first'	# tree listing
 alias l.='exa -a | rg "^\."'						# dotfiles
 
-# Changing "cat" to "bat"
+# Changing "cat" to "batcat"
 alias cat='bat'
 
-# Changing "vim" to "lunarvim"
-alias vim='lvim'
+# Changing "vim" to "neovim"
+alias vim='nvim'
 
 # Changing "code" to "codium"
 alias code='codium'
