@@ -76,6 +76,6 @@ alias py='python3'                                                              
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'                                # XDG-Compliance for wget
 alias grep='rg'                                                                         # changes "grep" to "ripgrep" (colorize grep output // good for log files)
 alias vim='lvim'                                                                        # changes "vim" to "lunarvim"
-alias code='codium'                                                                     # changes "code" to "codium" for archlinux
-alias cat='bat'                                                                         # bat for archlinux
-# alias cat='batcat'                                                                    # batcat for debian
+# alias code='codium'                                                                   # changes "code" to "codium" for archlinux
+# alias cat='bat'                                                                       # bat for archlinux
+alias cat='batcat'                                                                      # batcat for debian
