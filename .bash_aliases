@@ -1,7 +1,6 @@
 # bash customization
 alias bashconfig='$EDITOR ~/.bashrc'                                                    # edit .bashrc
 alias aliasconfig='$EDITOR ~/.bash_aliases'                                             # edit .bash_aliases
-alias starconfig='$EDITOR $XDG_CONFIG_HOME/starship.toml'                               # edit starship.toml
 
 # dotfiles git commands
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'              # git for dotfiles repo
