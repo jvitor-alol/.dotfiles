@@ -15,6 +15,7 @@
   "git.openRepositoryInParentFolders": "always",
   "git.ignoreRebaseWarning": true,
   "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "chromium --new-window",
   "liveServer.settings.CustomBrowser": "chrome",
   "files.autoSave": "onWindowChange",
   "files.associations": {
@@ -49,7 +50,7 @@
     "editor.rulers": [50, 72]
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
