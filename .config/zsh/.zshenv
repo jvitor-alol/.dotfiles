@@ -8,25 +8,22 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
 # XDG-Ninja recommendations
-export HISTFILE="$XDG_STATE_HOME"/zsh/history
-export WINEPREFIX="$XDG_DATA_HOME"/wine
-export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
-export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
-export LESSHISTFILE="$XDG_STATE_HOME"/less/history
-export WINEPREFIX="$XDG_DATA_HOME"/wine
-export PYTHONSTARTUP="/etc/python/pythonrc"
-export OMNISHARPHOME="$XDG_CONFIG_HOME"/omnisharp
-export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
-export GNUPGHOME="$XDG_DATA_HOME"/gnupg
-export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
-export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
-export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
-export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
 export ZSH="$XDG_DATA_HOME"/oh-my-zsh
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
+export LESSHISTFILE="$XDG_STATE_HOME"/less/history
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export GPG_TTY=$(tty) # Setup for the gpg-agent
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
+export PYTHONSTARTUP="/etc/python/pythonrc"
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export WINEPREFIX="$XDG_DATA_HOME"/wine
+export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages # .NET package manager
 
 # User-specific executable files may be stored in $HOME/.local/bin.
 # (https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
 if [ -d "$HOME/.local/bin" ]; then
     export PATH=$PATH:$HOME/.local/bin
 fi
-

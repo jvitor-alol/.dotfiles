@@ -1,6 +1,7 @@
 [user]
 	name = João Vitor Alves
 	email = 74667067+jvitor-alol@users.noreply.github.com
+	signingkey = F48D30211B0CEA98
 [color]
 	ui = true
 [core]
@@ -10,3 +11,5 @@
 [pager]
 	branch = false
 	tag = false
+[commit]
+	gpgsign = true
