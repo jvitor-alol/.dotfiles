@@ -2,6 +2,7 @@
   "workbench.colorTheme": "Tokyo Night",
   "workbench.iconTheme": "simple-icons",
   "workbench.startupEditor": "none",
+  "window.restoreWindows": "none",
   "editor.formatOnSave": true,
   "editor.wordWrap": "on",
   "editor.fontSize": 18,
