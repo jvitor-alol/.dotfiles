@@ -53,6 +53,19 @@
 		],
 		"description": "Create a new function"
 	},
+	"Generic Decorator": {
+		"prefix": "!decorate",
+		"body": [
+			"def ${1:decorator_name}(function: Callable) -> Callable:",
+			"\tdef wrapper(*args, **kwargs) -> ${2:Any}:",
+			"\t\t${3:# code here}",
+			"\t\tresult = function(*args, **kwargs)",
+			"\t\t${4:# additional code here}",
+			"\t\treturn result",
+			"\treturn wrapper"
+		],
+		"description": "Creates a new generic decorator",
+	},
 	"Clear Terminal": {
 		"prefix": "!clear",
 		"body": [
