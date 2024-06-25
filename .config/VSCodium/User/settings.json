@@ -37,7 +37,7 @@
     "editor.formatOnType": true,
     "editor.defaultFormatter": "ms-python.autopep8",
     "editor.formatOnSave": true,
-    "editor.rulers": [79, 120]
+    "editor.rulers": [72, 79, 99]
   },
   "[css]": {
     "editor.rulers": [
