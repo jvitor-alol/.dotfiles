@@ -48,9 +48,7 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 ```console
 asdf plugin add python;
 asdf plugin add rust;
-asdf plugin add dotnet;
 asdf plugin add nodejs;
-asdf plugin add java;
 asdf install
 ```
 
