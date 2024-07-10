@@ -60,7 +60,7 @@ alias ....='cd ../../..'                                                        
 alias ls='exa -laa --icons --color=always --group-directories-first'                    # my preferred listing
 alias la='exa -a --icons --color=always --group-directories-first'                      # all files and dirs
 alias ll='exa -l --icons --color=always --group-directories-first'                      # long format
-alias lt='exa -aT --icons --color=always --group-directories-first'                     # tree listing
+alias lt='exa -T --icons --color=always --group-directories-first'                      # tree listing
 alias l.='exa -a | rg "^\."'                                                            # dotfiles
 
 # Adding flags & misc.
