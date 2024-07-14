@@ -1,23 +1,25 @@
-# bash customization
-alias bashconfig='$EDITOR ~/.bashrc'                                                    # edit .bashrc
-alias aliasconfig='$EDITOR ~/.bash_aliases'                                             # edit .bash_aliases
+# zsh customization
+alias zshconfig='$EDITOR $ZDOTDIR/.zshrc'                                               # edit .zshrc
+alias aliasconfig='$EDITOR $ZDOTDIR/.zsh_aliases'                                       # edit .zsh_aliases
+alias envconfig='$EDITOR $ZDOTDIR/.zshenv'                                              # edit .zshenv
+alias starconfig='$EDITOR $XDG_CONFIG_HOME/starship.toml'                               # edit starship.toml
 
 # dotfiles git commands
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'              # git for dotfiles repo
 alias dotstat='dotfiles status'                                                         # git status (dotfiles)
 alias dotall='dotfiles branch -vva'                                                     # git branch -vv -a (dotfiles)
 alias dotadd='dotfiles add'                                                             # git add (dotfiles)
-alias dotupdate='dotfiles commit -am'                                                   # git add -u & git commit -m (dotfiles)
+alias dotupdate='dotfiles commit -a'                                                    # git add -u & git commit (dotfiles)
 alias dotsync='dotfiles pull'                                                           # git pull (dotfiles)
 alias dotpush='dotfiles push origin'                                                    # git push origin (dotfiles)
 
-# apt
-alias aptu='sudo apt update'                                                            # update pkgs
-alias aptg='sudo apt upgrade -y'                                                        # upgrade pkgs
-alias apti='sudo apt install'                                                           # install pkgs
-alias aptarm='sudo apt autoremove'                                                      # remove no longer needed dependencies
+# apt (for debian-based distros)
+# alias aptu='sudo apt update'                                                          # update pkgs
+# alias aptg='sudo apt upgrade -y'                                                      # upgrade pkgs
+# alias apti='sudo apt install'                                                         # install pkgs
+# alias aptarm='sudo apt autoremove'                                                    # remove no longer needed dependencies
 
-# pacman and yay
+# pacman and yay (arch linux)
 alias pacsyu='sudo pacman -Syu'                                                         # update only standard pkgs
 alias pacsyyu='sudo pacman -Syyu'                                                       # Refresh pkglist & update standard pkgs
 alias yaysua='yay -Sua --noconfirm'                                                     # update only AUR pkgs
@@ -33,7 +35,7 @@ alias allbranch='branch -vv -a'                                                 
 alias switch='git switch'                                                               # switch to branch
 alias checkout='git checkout'                                                           # checkout to branch
 alias clone='git clone'                                                                 # clone repository
-alias commit='git commit -m'                                                            # commit with message
+alias commit='git commit'                                                               # open git commit editor
 alias fetch='git fetch -pv'                                                             # fetch and prune stale branches, verbose
 alias pull='git pull'                                                                   # pull from remote
 alias push='git push'                                                                   # push to origin
@@ -58,7 +60,7 @@ alias ....='cd ../../..'                                                        
 alias ls='exa -laa --icons --color=always --group-directories-first'                    # my preferred listing
 alias la='exa -a --icons --color=always --group-directories-first'                      # all files and dirs
 alias ll='exa -l --icons --color=always --group-directories-first'                      # long format
-alias lt='exa -aT --icons --color=always --group-directories-first'                     # tree listing
+alias lt='exa -T --icons --color=always --group-directories-first'                      # tree listing
 alias l.='exa -a | rg "^\."'                                                            # dotfiles
 
 # Adding flags & misc.
