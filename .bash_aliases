@@ -7,17 +7,17 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'      
 alias dotstat='dotfiles status'                                                         # git status (dotfiles)
 alias dotall='dotfiles branch -vva'                                                     # git branch -vv -a (dotfiles)
 alias dotadd='dotfiles add'                                                             # git add (dotfiles)
-alias dotupdate='dotfiles commit -am'                                                   # git add -u & git commit -m (dotfiles)
+alias dotupdate='dotfiles commit -a'                                                    # git add -u & git commit (dotfiles)
 alias dotsync='dotfiles pull'                                                           # git pull (dotfiles)
 alias dotpush='dotfiles push origin'                                                    # git push origin (dotfiles)
 
-# apt
-alias aptu='sudo apt update'                                                            # update pkgs
-alias aptg='sudo apt upgrade -y'                                                        # upgrade pkgs
-alias apti='sudo apt install'                                                           # install pkgs
-alias aptarm='sudo apt autoremove'                                                      # remove no longer needed dependencies
+# apt (for debian-based distros)
+# alias aptu='sudo apt update'                                                          # update pkgs
+# alias aptg='sudo apt upgrade -y'                                                      # upgrade pkgs
+# alias apti='sudo apt install'                                                         # install pkgs
+# alias aptarm='sudo apt autoremove'                                                    # remove no longer needed dependencies
 
-# pacman and yay
+# pacman and yay (arch linux)
 alias pacsyu='sudo pacman -Syu'                                                         # update only standard pkgs
 alias pacsyyu='sudo pacman -Syyu'                                                       # Refresh pkglist & update standard pkgs
 alias yaysua='yay -Sua --noconfirm'                                                     # update only AUR pkgs
@@ -33,7 +33,7 @@ alias allbranch='branch -vv -a'                                                 
 alias switch='git switch'                                                               # switch to branch
 alias checkout='git checkout'                                                           # checkout to branch
 alias clone='git clone'                                                                 # clone repository
-alias commit='git commit -m'                                                            # commit with message
+alias commit='git commit'                                                               # open git commit editor
 alias fetch='git fetch -pv'                                                             # fetch and prune stale branches, verbose
 alias pull='git pull'                                                                   # pull from remote
 alias push='git push'                                                                   # push to origin
@@ -58,7 +58,7 @@ alias ....='cd ../../..'                                                        
 alias ls='exa -laa --icons --color=always --group-directories-first'                    # my preferred listing
 alias la='exa -a --icons --color=always --group-directories-first'                      # all files and dirs
 alias ll='exa -l --icons --color=always --group-directories-first'                      # long format
-alias lt='exa -aT --icons --color=always --group-directories-first'                     # tree listing
+alias lt='exa -T --icons --color=always --group-directories-first'                      # tree listing
 alias l.='exa -a | rg "^\."'                                                            # dotfiles
 
 # Adding flags & misc.
@@ -74,6 +74,6 @@ alias py='python3'                                                              
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'                                # XDG-Compliance for wget
 alias grep='rg'                                                                         # changes "grep" to "ripgrep" (colorize grep output // good for log files)
 alias vim='lvim'                                                                        # changes "vim" to "lunarvim"
-# alias code='codium'                                                                   # changes "code" to "codium" for archlinux
-# alias cat='bat'                                                                       # bat for archlinux
-alias cat='batcat'                                                                      # batcat for debian
+alias code='codium'                                                                     # changes "code" to "codium" for archlinux
+alias cat='bat'                                                                         # bat for archlinux
+# alias cat='batcat'                                                                    # batcat for debian
