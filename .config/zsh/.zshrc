@@ -79,11 +79,11 @@ ex ()		# usage: ex <file>
   fi
 }
 
-# My Aliases
-if [ -f $ZDOTDIR/.zsh_aliases ]; then
-    . $ZDOTDIR/.zsh_aliases
+# My aliases
+if [ -f $ZDOTDIR/.aliases ]; then
+    . $ZDOTDIR/.aliases
 fi
 
-# Starship Prompt
+# Starship prompt
 eval "$(starship init zsh)"
 
