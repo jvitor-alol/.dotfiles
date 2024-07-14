@@ -1,8 +1,6 @@
-# zsh customization
-alias zshconfig='$EDITOR $ZDOTDIR/.zshrc'                                               # edit .zshrc
-alias aliasconfig='$EDITOR $ZDOTDIR/.zsh_aliases'                                       # edit .zsh_aliases
-alias envconfig='$EDITOR $ZDOTDIR/.zshenv'                                              # edit .zshenv
-alias starconfig='$EDITOR $XDG_CONFIG_HOME/starship.toml'                               # edit starship.toml
+# bash customization
+alias bashconfig='$EDITOR ~/.bashrc'                                                    # edit .bashrc
+alias aliasconfig='$EDITOR ~/.bash_aliases'                                             # edit .bash_aliases
 
 # dotfiles git commands
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'              # git for dotfiles repo
