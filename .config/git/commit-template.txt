@@ -10,7 +10,7 @@
 # BREAKING CHANGE: <description of breaking change>
 #
 # [optional footer(s)]
-# [Refs/Closes/Resolves/Fixes]: <optional reference>
+# [optional reference(s)]
 
 # COMMIT TYPES:
 # -------------
@@ -26,29 +26,7 @@
 # chore: Other changes that don't modify src or test files
 # revert: Reverts a previous commit
 
-# SCOPE:
-# ------
-# The scope could be anything specifying the place of the commit change (e.g., auth, api, config).
-
-# SUBJECT:
-# --------
-# - Use the imperative, present tense: "change" not "changed" nor "changes".
-# - Don't capitalize the first letter.
-# - No dot (.) at the end.
-
-# BODY (optional):
-# ----------------
-# - Use this space to explain the "what" and "why" of the change.
-# - Include the motivation for the change and contrast with the previous behavior.
-# - Break the text into lines of no more than 72 characters.
-
-# BREAKING CHANGE (optional):
-# ---------------------------
-# - Use this field to describe any breaking changes.
-# - Start with the phrase "BREAKING CHANGE:" followed by an explanation.
-
 # REFERENCES (optional):
 # ----------------------
 # - Use this field to reference related issues, pull requests, etc.
-# - Examples: "Refs #123", "Fixes #456"
-
+# - Examples: "Refs: #123", "Fixes: #456" (Refs/Fixes/Closes/Resolves)
