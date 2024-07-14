@@ -9,7 +9,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'      
 alias dotstat='dotfiles status'                                                         # git status (dotfiles)
 alias dotall='dotfiles branch -vva'                                                     # git branch -vv -a (dotfiles)
 alias dotadd='dotfiles add'                                                             # git add (dotfiles)
-alias dotupdate='dotfiles commit -am'                                                   # git add -u & git commit -m (dotfiles)
+alias dotupdate='dotfiles commit -a'                                                    # git add -u & git commit (dotfiles)
 alias dotsync='dotfiles pull'                                                           # git pull (dotfiles)
 alias dotpush='dotfiles push origin'                                                    # git push origin (dotfiles)
 
@@ -35,7 +35,7 @@ alias allbranch='branch -vv -a'                                                 
 alias switch='git switch'                                                               # switch to branch
 alias checkout='git checkout'                                                           # checkout to branch
 alias clone='git clone'                                                                 # clone repository
-alias commit='git commit -m'                                                            # commit with message
+alias commit='git commit'                                                               # open git commit editor
 alias fetch='git fetch -pv'                                                             # fetch and prune stale branches, verbose
 alias pull='git pull'                                                                   # pull from remote
 alias push='git push'                                                                   # push to origin
