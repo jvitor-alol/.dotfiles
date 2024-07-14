@@ -1,0 +1,54 @@
+
+# COMMIT MESSAGE TEMPLATE
+# For more information, see the official documentation:
+# https://www.conventionalcommits.org/en/v1.0.0/
+# =======================
+# <type>[optional scope]: <short description>
+#
+# [optional body]
+# 
+# BREAKING CHANGE: <description of breaking change>
+#
+# [optional footer(s)]
+# [Refs/Closes/Resolves/Fixes]: <optional reference>
+
+# COMMIT TYPES:
+# -------------
+# feat: A new feature
+# fix: A bug fix
+# docs: Documentation changes
+# style: Changes that do not affect the meaning of the code (white-space, formatting, etc.)
+# refactor: A code change that neither fixes a bug nor adds a feature
+# perf: A code change that improves performance
+# test: Adding or correcting tests
+# build: Changes that affect the build system or external dependencies (example scopes: gulp, npm)
+# ci: Changes to our CI configuration files and scripts
+# chore: Other changes that don't modify src or test files
+# revert: Reverts a previous commit
+
+# SCOPE:
+# ------
+# The scope could be anything specifying the place of the commit change (e.g., auth, api, config).
+
+# SUBJECT:
+# --------
+# - Use the imperative, present tense: "change" not "changed" nor "changes".
+# - Don't capitalize the first letter.
+# - No dot (.) at the end.
+
+# BODY (optional):
+# ----------------
+# - Use this space to explain the "what" and "why" of the change.
+# - Include the motivation for the change and contrast with the previous behavior.
+# - Break the text into lines of no more than 72 characters.
+
+# BREAKING CHANGE (optional):
+# ---------------------------
+# - Use this field to describe any breaking changes.
+# - Start with the phrase "BREAKING CHANGE:" followed by an explanation.
+
+# REFERENCES (optional):
+# ----------------------
+# - Use this field to reference related issues, pull requests, etc.
+# - Examples: "Refs #123", "Fixes #456"
+

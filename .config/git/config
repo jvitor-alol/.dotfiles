@@ -13,3 +13,4 @@
 	tag = false
 [commit]
 	gpgsign = true
+	template = ~/.config/git/commit-template.txt

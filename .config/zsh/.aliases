@@ -36,6 +36,7 @@ fi
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'              # git for dotfiles repo
 alias dotstat='dotfiles status'                                                         # git status (dotfiles)
 alias dotall='dotfiles branch -vva'                                                     # git branch -vv -a (dotfiles)
+alias dotdetail='dotfiles cat-file -p HEAD'                                             # git cat-file -p (dotfiles)
 alias dotlog='dotfiles log'                                                             # git log (dotfiles)
 alias dotdiff='dotfiles diff HEAD'                                                      # git diff HEAD (dotfiles)
 alias dotadd='dotfiles add'                                                             # git add (dotfiles)
@@ -56,8 +57,10 @@ alias fetch='git fetch -pv'                                                     
 alias pull='git pull'                                                                   # pull from remote
 alias push='git push'                                                                   # push to origin
 alias stat='git status'                                                                 # 'status' is protected name so using 'stat' instead
+alias gdiff='git diff'                                                                  # show changes between commits
 alias reflog='git reflog'                                                               # displays reflog
 alias glog='git log'                                                                    # displays commit log
+alias gdetail='git cat-file -p HEAD'                                                    # displays detailed info on most recent commit
 alias tag='git tag'                                                                     # list tags
 alias newtag='git tag -a'                                                               # create new tag
 
