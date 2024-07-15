@@ -47,6 +47,7 @@ alias dotpush='dotfiles push origin'                                            
 # Git
 alias addup='git add -u'                                                                # add only modified and deleted files
 alias addall='git add .'                                                                # add all to staging area
+alias unstage='git restore --staged .'                                                  # unstage all changes to be commited
 alias branch='git branch'                                                               # branch command
 alias allbranch='branch -vv -a'                                                         # list all branches including remote
 alias switch='git switch'                                                               # switch to branch
