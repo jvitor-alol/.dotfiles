@@ -93,6 +93,7 @@ alias ghistory='history 1 | rg'                                                 
 alias ip='ip -color=auto'                                                               # ip highlight
 alias ips='ip -c -br a'                                                                 # human-readable ip list
 alias py='python3'                                                                      # run python
+alias pyenv='source .venv/bin/activate'                                                 # activates python virtual environment
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'                                # XDG-Compliance for wget
 alias grep='rg'                                                                         # changes "grep" to "ripgrep" (colorize grep output // good for log files)
 alias vim='lvim'                                                                        # changes "vim" to "lunarvim"

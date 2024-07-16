@@ -70,7 +70,7 @@ format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 [python]
 symbol = ""
 style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+format = '[[ ${symbol}${pyenv_prefix} (${version} )(\($virtualenv\))](fg:#769ff0 bg:#212736)]($style)'
 
 [c]
 symbol = ""
@@ -100,7 +100,7 @@ style = "bg:color_orange fg:color_fg0"
 
 [os.symbols]
 Windows = "󰍲"
-Ubuntu = "\ue73a"
+Ubuntu = ""
 SUSE = ""
 Raspbian = "󰐿"
 Mint = "󰣭"
