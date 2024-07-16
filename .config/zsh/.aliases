@@ -61,7 +61,7 @@ alias stat='git status'                                                         
 alias gdiff='git diff'                                                                  # show changes between commits
 alias reflog='git reflog'                                                               # displays reflog
 alias glog='git log'                                                                    # displays commit log
-alias gdetail='git cat-file -p HEAD'                                                    # displays detailed info on most recent commit
+alias gdetail='git cat-file -p'                                                         # displays detailed info on specified commit
 alias tag='git tag'                                                                     # list tags
 alias newtag='git tag -a'                                                               # create new tag
 
