@@ -126,9 +126,9 @@ yaysyu xdg-ninja
 
 Install XDG-Ninja and add it to PATH (Other distros)
 ```console
-git clone https://github.com/b3nj5m1n/xdg-ninja.git $XDG_DATA_HOME
+git clone https://github.com/b3nj5m1n/xdg-ninja.git $XDG_DATA_HOME/xdg-ninja
 mkdir ~/.local/bin
-cp $XDG_DATA_HOME/xdg-ninja/xdg-ninja.sh .local/bin/xdg-ninja 
+ln -s $XDG_DATA_HOME/xdg-ninja/xdg-ninja.sh .local/bin/xdg-ninja 
 ```
 
 ## VSCodium extensions
