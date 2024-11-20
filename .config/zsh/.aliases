@@ -40,7 +40,7 @@ alias dotdetail='dotfiles cat-file -p HEAD'                                     
 alias dotlog='dotfiles log'                                                             # git log (dotfiles)
 alias dotdiff='dotfiles diff HEAD'                                                      # git diff HEAD (dotfiles)
 alias dotadd='dotfiles add'                                                             # git add (dotfiles)
-alias dotupdate='dotfiles commit -a'                                                    # git add -u & git commit (dotfiles)
+alias dotcommit='dotfiles commit -a'                                                    # git add -u & git commit (dotfiles)
 alias dotsync='dotfiles pull -p'                                                        # git pull -p (dotfiles)
 alias dotpush='dotfiles push origin'                                                    # git push origin (dotfiles)
 
