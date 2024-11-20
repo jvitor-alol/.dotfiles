@@ -33,7 +33,7 @@ plugins=(
 	zsh-autosuggestions
 	you-should-use
 	asdf
-  poetry
+	poetry
 )
 
 source $ZSH/oh-my-zsh.sh
