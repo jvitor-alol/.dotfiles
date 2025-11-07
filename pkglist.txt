@@ -130,6 +130,7 @@ procs
 qbittorrent
 qdiskinfo
 qqc2-breeze-style
+ripgrep
 sbctl
 sddm
 sddm-kcm

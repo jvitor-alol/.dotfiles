@@ -4,14 +4,12 @@
 
 Run the following line for Debian-based distributions
 ```console
-sudo apt install neofetch git zsh curl exa fzf ripgrep bat neovim build-essential
+sudo apt install git zsh curl neovim build-essential
 ```
 
 Run the following line for Arch Linux
 ```console
-sudo pacman -Syu git zsh curl exa fzf bat ripgrep bashtop \
-nano vim neovim neofetch firefox steam qbittorrent cmatrix \
-zip unzip base-devel devtools openssh ufw
+sudo pacman -Syu git curl base-devel
 ```
 
 Install [LunarVim](https://www.lunarvim.org/docs/installation)
@@ -19,17 +17,19 @@ Install [LunarVim](https://www.lunarvim.org/docs/installation)
 LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
 ```
 
-Install [yay](https://github.com/Jguer/yay) for [AUR](https://aur.archlinux.org/)
+Install [paru](https://github.com/Morganamilo/paru) for [AUR](https://aur.archlinux.org/)
 ```console
-git clone https://aur.archlinux.org/yay.git;
-cd yay;
+sudo pacman -S --needed base-devel;
+git clone https://aur.archlinux.org/paru.git;
+cd paru;
 makepkg -si
 ```
 
-Install AUR packages
+Install from `pkglist` (Arch Linux)
 ```console
-yay -Sua --noconfirm alacritty-git autojump xdg-ninja vscodium-bin duf libreoffice-still
+curl -fsSL https://raw.githubusercontent.com/jvitor-alol/.dotfiles/refs/heads/main/pkglist.txt | paru -Syu --needed -
 ```
+
 
 [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
 ```console
@@ -39,22 +39,14 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 OMZ Plugins
 ```console
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting;
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions;
-git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use;
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
 ```
 
 [ASDF](https://github.com/asdf-vm/asdf) plugins
 ```console
 asdf plugin add python;
-asdf plugin add rust;
 asdf plugin add nodejs;
 asdf install
-```
-
-Install [Starship Prompt](https://starship.rs/guide/#%F0%9F%9A%80-installation)
-```console
-curl -sS https://starship.rs/install.sh | sh
 ```
 
 ## Cloning dotfiles
@@ -121,14 +113,7 @@ dotfiles checkout -f
 
 Install [XDG-Ninja](https://github.com/b3nj5m1n/xdg-ninja) (AUR)
 ```console
-yaysyu xdg-ninja
-```
-
-Install XDG-Ninja and add it to PATH (Other distros)
-```console
-git clone https://github.com/b3nj5m1n/xdg-ninja.git $XDG_DATA_HOME/xdg-ninja
-mkdir ~/.local/bin
-ln -s $XDG_DATA_HOME/xdg-ninja/xdg-ninja.sh .local/bin/xdg-ninja 
+parusua xdg-ninja
 ```
 
 ## VSCodium extensions
