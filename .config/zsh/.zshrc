@@ -37,7 +37,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Zcompdump location // doesn't really work with oh-my-zsh installed
-# compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 ######## USER CONFIGURATION ########
 

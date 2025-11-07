@@ -15,12 +15,15 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GPG_TTY=$(tty) # Setup for the gpg-agent
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
-export PYTHONSTARTUP="/etc/python/pythonrc"
+export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/pythonrc
+export PYTHON_HISTORY="$XDG_STATE_HOME"/python_history
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export WINEPREFIX="$XDG_DATA_HOME"/wine
 export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages # .NET package manager
+export ASDF_DATA_DIR="$XDG_DATA_HOME"/asdf
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
 
 # User-specific executable files may be stored in $HOME/.local/bin.
 # (https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
