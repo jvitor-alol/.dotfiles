@@ -1,16 +1,14 @@
-live_config_reload = true
-
-[shell]
+[terminal.shell]
 program = "/usr/bin/zsh"
 
 [window]
 dimensions = { columns = 95, lines = 30 }
-opacity = 0.9
+opacity = 0.8
 padding.x = 15
 padding.y = 0
 decorations = "Full" # "None"
 decorations_theme_variant = "Dark" # "Light"
-blur = true
+blur = false
 
 [font]
 normal = { family = "Cousine Nerd Font", style = "Regular" }
@@ -25,4 +23,9 @@ save_to_clipboard = true
 [cursor]
 style = { shape = "Block", blinking = "Always"}
 unfocused_hollow = true
+
+[general]
+live_config_reload = true
+
+[terminal]
 

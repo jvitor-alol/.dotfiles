@@ -1,4 +1,6 @@
-# Shell customization
+# ================================================================
+# SHELL CUSTOMIZATION
+# ================================================================
 alias aliasconfig='$EDITOR $ZDOTDIR/.aliases'                                           # edit .aliases
 alias starconfig='$EDITOR $XDG_CONFIG_HOME/starship.toml'                               # edit starship.toml
 if [[ $0 == *"zsh"* ]]; then
@@ -10,7 +12,15 @@ elif [[ $0 == *"bash"* ]]; then
     alias shconfig='$EDITOR ~/.bashrc'                                                  # edit .bashrc
 fi
 
-# Linux type-specific aliases
+# System configuration files (quick view/edit)
+alias fstabview='cat /etc/fstab'                                                        # view /etc/fstab with syntax highlighting
+alias grubview='cat /etc/default/grub'                                                  # view /etc/default/grub
+alias hostview='cat /etc/hosts'                                                         # view /etc/hosts
+alias resolvview='cat /etc/resolv.conf'                                                 # view current DNS configuration
+
+# ================================================================
+# LINUX TYPE-SPECIFIC ALIASES
+# ================================================================
 if [[ -f /etc/debian_version ]]; then
     # aptitude package manager for Debian-based distros
     alias aptu='sudo apt update'                                                        # update pkgs
@@ -20,19 +30,25 @@ if [[ -f /etc/debian_version ]]; then
     # other programs
     alias cat='batcat'                                                                  # batcat for debian
 elif [[ -f /etc/arch-release ]]; then
-    # pacman and yay for Arch-based distros
+    # pacman and paru for Arch-based distros
     alias pacsyu='sudo pacman -Syu'                                                     # update only standard pkgs
     alias pacsyyu='sudo pacman -Syyu'                                                   # refresh pkglist & update standard pkgs
-    alias yaysua='yay -Sua --noconfirm'                                                 # update only AUR pkgs
-    alias yaysyu='yay -Syu --noconfirm'                                                 # update standard pkgs and AUR pkgs
+    alias parusua='paru -Sua'                                                           # update only AUR pkgs
+    alias parusyu='paru -Syu'                                                           # update standard pkgs and AUR pkgs
+    alias pkglist='paru -Qqe > pkglist.txt '
     alias unlock='sudo rm /var/lib/pacman/db.lck'                                       # remove pacman lock
+    alias aurlist='paru -Qm'                                                            # lists only AUR pkgs
+    alias pkginfo='paru -Qi'                                                            # shows information on a installed package
+    alias orphans='pacman -Qtdq'                                                        # lists orphaned packages
     alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'                                    # remove orphaned packages (DANGEROUS!)
     # other programs
     alias cat='bat'                                                                     # bat for archlinux
-    alias code='codium'                                                                 # changes "code" to "codium" for archlinux
+    alias code='flatpak run com.vscodium.codium'                                        # changes "code" to "codium" for archlinux
 fi
 
-# Dotfiles git commands
+# ================================================================
+# DOTFILES GIT COMMANDS
+# ================================================================
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'              # git for dotfiles repo
 alias dotstat='dotfiles status'                                                         # git status (dotfiles)
 alias dotall='dotfiles branch -vva'                                                     # git branch -vv -a (dotfiles)
@@ -44,10 +60,12 @@ alias dotcommit='dotfiles commit -a'                                            
 alias dotsync='dotfiles pull -p'                                                        # git pull -p (dotfiles)
 alias dotpush='dotfiles push origin'                                                    # git push origin (dotfiles)
 
-# Git
+# ================================================================
+# GIT
+# ================================================================
 alias addup='git add -u'                                                                # add only modified and deleted files
 alias addall='git add .'                                                                # add all to staging area
-alias unstage='git restore --staged .'                                                  # unstage all changes to be commited
+alias unstage='git restore --staged .'                                                  # unstage all changes to be committed
 alias branch='git branch'                                                               # branch command
 alias allbranch='branch -vv -a'                                                         # list all branches including remote
 alias switch='git switch'                                                               # switch to branch
@@ -65,31 +83,40 @@ alias gdetail='git cat-file -p'                                                 
 alias tag='git tag'                                                                     # list tags
 alias newtag='git tag -a'                                                               # create new tag
 
-# Processes
-alias psa='ps auxf'	                                                                    # displays a hierarchical view of running processes
+# ================================================================
+# PROCESSES & SYSTEM TOOLS
+# ================================================================
+alias psa='ps auxf'                                                                     # displays a hierarchical view of running processes
 alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'                                # filters the process list to show lines that include "VSZ"
 alias psmem='ps auxf | sort -nr -k 4'                                                   # processes listed in descending order based on memory usage
 alias pscpu='ps auxf | sort -nr -k 3'                                                   # processes listed in descending order based on CPU usage
+alias fzfh='history 1 | fzf'                                                            # fuzzy search through shell history
 
-# Navigation
+# ================================================================
+# NAVIGATION
+# ================================================================
 alias ..='cd ..'                                                                        # moves up 1 folder
 alias ...='cd ../..'                                                                    # moves up 2 folders
 alias ....='cd ../../..'                                                                # moves up 3 folders
 
-# Changing "ls" to "exa"
-alias ls='exa -laa --icons --color=always --group-directories-first'                    # my preferred listing
-alias la='exa -a --icons --color=always --group-directories-first'                      # all files and dirs
-alias ll='exa -l --icons --color=always --group-directories-first'                      # long format
-alias lt='exa -T --icons --color=always --group-directories-first'                      # tree listing
-alias l.='exa -a | rg "^\."'                                                            # dotfiles
+# ================================================================
+# FILE LISTING (EZA)
+# ================================================================
+alias ls='eza -laa --icons --color=always --group-directories-first'                    # my preferred listing
+alias la='eza -a --icons --color=always --group-directories-first'                      # all files and dirs
+alias ll='eza -l --icons --color=always --group-directories-first'                      # long format
+alias lt='eza -T --icons --color=always --group-directories-first'                      # tree listing
+alias l.='eza -a | rg "^\."'                                                            # dotfiles only
 
-# Adding flags & misc.
+# ================================================================
+# UTILITIES & MISC
+# ================================================================
 alias cp='cp -iv'                                                                       # interactive and verbose copy
 alias mkdir='mkdir -pv'                                                                 # create directory structure
 alias df='df -h'                                                                        # human-readable disk space usage
 alias free='free -m'                                                                    # RAM usage, show sizes in MB
-alias history='history -E'                                                              # history w/ timestamps
-alias ghistory='history 1 | rg'                                                         # history with ripgrep
+alias hist='history -E'                                                                 # history w/ timestamps
+alias ghist='history 1 | rg'                                                            # history with ripgrep
 alias ip='ip -color=auto'                                                               # ip highlight
 alias ips='ip -c -br a'                                                                 # human-readable ip list
 alias py='python3'                                                                      # run python
@@ -97,3 +124,5 @@ alias pyenv='source .venv/bin/activate'                                         
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'                                # XDG-Compliance for wget
 alias grep='rg'                                                                         # changes "grep" to "ripgrep" (colorize grep output // good for log files)
 alias vim='lvim'                                                                        # changes "vim" to "lunarvim"
+alias please='sudo $(fc -ln -1)'                                                        # repeats the last command with sudo
+alias fetch='fastfetch'                                                                 # shows system info

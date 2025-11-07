@@ -27,13 +27,11 @@ zstyle ':omz:update' mode reminder
 # Oh My Zsh plugins
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	zsh-syntax-highlighting
-	history-substring-search
-	autojump
-	zsh-autosuggestions
-	you-should-use
-	asdf
-	poetry
+  asdf
+  autojump
+  zsh-syntax-highlighting
+  you-should-use
+  poetry
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -88,3 +86,5 @@ fi
 # Starship prompt
 eval "$(starship init zsh)"
 
+# Broot launcher
+source /home/bossun/.config/broot/launcher/bash/br

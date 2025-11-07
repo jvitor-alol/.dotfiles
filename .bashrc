@@ -100,3 +100,5 @@ if ! shopt -oq 	posix; then
   fi
 fi
 
+
+source /home/bossun/.config/broot/launcher/bash/br
