@@ -25,6 +25,9 @@ cmatrix
 dialog
 discord
 discover
+dnsmasq
+docker
+docker-compose
 dolphin
 drkonqi
 duf
@@ -96,6 +99,7 @@ milou
 nano
 neovim
 networkmanager
+noto-fonts-cjk
 ocean-sound-theme
 os-prober
 oxygen
@@ -129,6 +133,7 @@ print-manager
 procs
 qbittorrent
 qdiskinfo
+qemu-desktop
 qqc2-breeze-style
 ripgrep
 sbctl
@@ -142,7 +147,9 @@ sudo
 systemsettings
 timeshift-autosnap
 tldr
+tpm2-tools
 tree
+ttf-cousine-nerd
 ufw
 unzip
 update-grub
@@ -150,6 +157,7 @@ usbutils
 ventoy-bin
 vi
 vim
+virt-manager
 vlc
 vlc-plugins-all
 vulkan-radeon

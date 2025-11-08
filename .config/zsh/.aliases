@@ -35,12 +35,12 @@ elif [[ -f /etc/arch-release ]]; then
     alias pacsyyu='sudo pacman -Syyu'                                                   # refresh pkglist & update standard pkgs
     alias parusua='paru -Sua'                                                           # update only AUR pkgs
     alias parusyu='paru -Syu'                                                           # update standard pkgs and AUR pkgs
-    alias pkglist='paru -Qqe > pkglist.txt '
-    alias unlock='sudo rm /var/lib/pacman/db.lck'                                       # remove pacman lock
+    alias pkglist='paru -Qqe'
     alias aurlist='paru -Qm'                                                            # lists only AUR pkgs
     alias pkginfo='paru -Qi'                                                            # shows information on a installed package
     alias orphans='pacman -Qtdq'                                                        # lists orphaned packages
     alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'                                    # remove orphaned packages (DANGEROUS!)
+    alias unlock='sudo rm /var/lib/pacman/db.lck'                                       # remove pacman lock
     # other programs
     alias cat='bat'                                                                     # bat for archlinux
     alias code='flatpak run com.vscodium.codium'                                        # changes "code" to "codium" for archlinux

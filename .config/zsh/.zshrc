@@ -83,8 +83,8 @@ if [ -f $ZDOTDIR/.aliases ]; then
     . $ZDOTDIR/.aliases
 fi
 
-# Starship prompt
-eval "$(starship init zsh)"
-
 # Broot launcher
 source /home/bossun/.config/broot/launcher/bash/br
+
+# Starship prompt
+eval "$(starship init zsh)"
