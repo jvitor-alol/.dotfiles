@@ -19,9 +19,11 @@ breeze
 breeze-gtk
 breeze-plymouth
 broot
+btrfs-assistant
 btrfs-progs
 calibre
 cmatrix
+cronie
 dialog
 discord
 discover
@@ -139,13 +141,14 @@ ripgrep
 sbctl
 sddm
 sddm-kcm
+snap-pac
+snapper
 sof-firmware
 spectacle
 starship
 steam
 sudo
 systemsettings
-timeshift-autosnap
 tldr
 tpm2-tools
 tree
