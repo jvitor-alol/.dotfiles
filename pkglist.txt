@@ -107,7 +107,6 @@ oxygen
 oxygen-sounds
 partitionmanager
 paru
-paru-debug
 pika-backup
 piper
 plasma-activities

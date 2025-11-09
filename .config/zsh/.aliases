@@ -35,7 +35,8 @@ elif [[ -f /etc/arch-release ]]; then
     alias pacsyyu='sudo pacman -Syyu'                                                   # refresh pkglist & update standard pkgs
     alias parusua='paru -Sua'                                                           # update only AUR pkgs
     alias parusyu='paru -Syu'                                                           # update standard pkgs and AUR pkgs
-    alias pkglist='paru -Qqe'
+    alias parustt='paru -P --stats'                                                     # show paru stats
+    alias pkglist='paru -Qqe'                                                           # lists all installed pkgs
     alias aurlist='paru -Qm'                                                            # lists only AUR pkgs
     alias pkginfo='paru -Qi'                                                            # shows information on a installed package
     alias orphans='pacman -Qtdq'                                                        # lists orphaned packages
