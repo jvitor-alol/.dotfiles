@@ -23,7 +23,6 @@ btrfs-assistant
 btrfs-progs
 calibre
 cmatrix
-cronie
 dialog
 discord
 discover
@@ -137,6 +136,7 @@ qbittorrent
 qdiskinfo
 qemu-desktop
 qqc2-breeze-style
+reflector
 ripgrep
 sbctl
 sddm
@@ -175,5 +175,8 @@ xdg-desktop-portal-kde
 xdg-ninja
 zip
 zsh
+zsh-autocomplete
 zsh-autosuggestions
+zsh-completions
 zsh-history-substring-search
+zsh-syntax-highlighting

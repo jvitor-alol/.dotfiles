@@ -29,9 +29,9 @@ zstyle ':omz:update' mode reminder
 plugins=(
   asdf
   autojump
+  zsh-autosuggestions
   zsh-syntax-highlighting
   you-should-use
-  poetry
 )
 
 source $ZSH/oh-my-zsh.sh
