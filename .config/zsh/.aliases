@@ -125,5 +125,5 @@ alias pyenv='source .venv/bin/activate'                                         
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'                                # XDG-Compliance for wget
 alias grep='rg'                                                                         # changes "grep" to "ripgrep" (colorize grep output // good for log files)
 alias vim='lvim'                                                                        # changes "vim" to "lunarvim"
-alias please='sudo $(fc -ln -1)'                                                        # repeats the last command with sudo
-alias fetch='fastfetch'                                                                 # shows system info
+alias pls='sudo $(fc -ln -1)'                                                           # repeats the last command with sudo
+alias ff='fastfetch'                                                                    # shows system info
