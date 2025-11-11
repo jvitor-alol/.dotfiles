@@ -12,11 +12,6 @@ Run the following line for Arch Linux
 sudo pacman -Syu git curl base-devel
 ```
 
-Install [LunarVim](https://www.lunarvim.org/docs/installation)
-```console
-LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
-```
-
 Install [paru](https://github.com/Morganamilo/paru) for [AUR](https://aur.archlinux.org/)
 ```console
 sudo pacman -S --needed base-devel;
@@ -28,6 +23,11 @@ makepkg -si
 Install from `pkglist` (Arch Linux)
 ```console
 curl -fsSL https://raw.githubusercontent.com/jvitor-alol/.dotfiles/refs/heads/main/pkglist.txt | paru -Syu --needed -
+```
+
+Install [LunarVim](https://www.lunarvim.org/docs/installation)
+```console
+LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
 ```
 
 
