@@ -167,6 +167,7 @@ wacomtablet
 wget
 wine-mono
 wine-staging
+winetricks
 wireless_tools
 wl-clipboard
 wpa_supplicant
