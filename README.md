@@ -78,13 +78,12 @@ Append this line to /etc/zsh/zshenv
 export ZDOTDIR=$HOME/.config/zsh
 ```
 
-Run these commands
+Edit the configuration file and add the the following lines 
+
 ```console
-dotfiles remote set-head origin main;
 dotfiles config --edit
 ```
 
-And add the the following lines to the configuration file
 ```toml
 [core]
 	repositoryformatversion = 0
@@ -100,9 +99,10 @@ And add the the following lines to the configuration file
 	merge = refs/heads/main
 ```
 
-Fetch branches
+Fetch branches and run the following
 ```console
-dotfiles fetch
+dotfiles fetch;
+dotfiles remote set-head origin main
 ```
 
 Force checkout
