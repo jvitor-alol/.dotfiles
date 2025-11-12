@@ -23,6 +23,7 @@ btrfs-assistant
 btrfs-progs
 calibre
 cmatrix
+cups
 dialog
 discord
 discover
@@ -42,6 +43,7 @@ flatpak-kcm
 fwupd
 fzf
 gamemode
+ghostscript
 gimp
 git
 gparted
@@ -148,6 +150,7 @@ spectacle
 starship
 steam
 sudo
+system-config-printer
 systemsettings
 tldr
 tpm2-tools
