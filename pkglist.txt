@@ -65,6 +65,7 @@ kalk
 kate
 kde-cli-tools
 kde-gtk-config
+kdeconnect
 kdecoration
 kdeplasma-addons
 kdiskmark
@@ -104,6 +105,7 @@ nano
 neovim
 networkmanager
 noto-fonts-cjk
+ntfs-3g
 ocean-sound-theme
 os-prober
 oxygen
