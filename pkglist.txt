@@ -96,6 +96,7 @@ libreoffice-still
 linux
 linux-firmware
 linux-lts
+lsfg-vk-git
 man-db
 man-pages
 mangohud
