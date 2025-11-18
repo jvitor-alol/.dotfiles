@@ -1,0 +1,10 @@
+com.github.tchx84.Flatseal
+com.leinardi.gst
+com.spotify.Client
+com.ticktick.TickTick
+com.usebottles.bottles
+com.vscodium.codium
+io.ente.auth
+io.ente.photos
+io.github.flattool.Warehouse
+net.retrodeck.retrodeck

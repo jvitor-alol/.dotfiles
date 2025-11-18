@@ -25,6 +25,11 @@ Install from `pkglist` (Arch Linux)
 curl -fsSL https://raw.githubusercontent.com/jvitor-alol/.dotfiles/refs/heads/main/pkglist.txt | paru -Syu --needed -
 ```
 
+Install `flatpaks`
+```console
+curl -fsSL https://raw.githubusercontent.com/jvitor-alol/.dotfiles/refs/heads/main/flatpaks.txt | xargs -n1 flatpak install -y flathub
+```
+
 Install [LunarVim](https://www.lunarvim.org/docs/installation)
 ```console
 LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
