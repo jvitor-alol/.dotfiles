@@ -129,3 +129,29 @@ alias grep='rg'                                                                 
 alias vim='lvim'                                                                        # changes "vim" to "lunarvim"
 alias pls='sudo $(fc -ln -1)'                                                           # repeats the last command with sudo
 alias ff='fastfetch'                                                                    # shows system info
+
+# ================================================================
+# SYSTEMD & MAINTENANCE
+# ================================================================
+alias sc='systemctl'                                                                     # systemctl shortcut
+alias scs='systemctl status'                                                             # systemctl status view
+alias sce='systemctl list-unit-files --state=enabled'                                    # enabled systemd units
+alias scu='systemctl --user'                                                             # systemctl (user)
+alias scue='systemctl --user list-unit-files --state=enabled'                            # enabled user units
+
+# FSTRIM
+alias scfstr='systemctl status fstrim.timer'                                             # status of fstrim.timer
+alias jlfstr='journalctl -u fstrim.service'                                              # logs for fstrim.service
+alias jlfstrm='journalctl -u fstrim.service --since "1 month ago"'                       # fstrim logs from last month
+
+# SMARTD
+alias scsmart='systemctl status smartd.service'                                          # smartd service status
+alias jlsmart='journalctl -u smartd.service'                                             # logs for smartd.service
+alias jlsmartb='journalctl -u smartd.service -b'                                         # smartd logs (current boot)
+
+# BTRFS
+alias btsub='sudo btrfs subvolume list /'                                                # list Btrfs subvolumes
+alias btqgroup='sudo btrfs qgroup show /'                                                # qgroup info
+alias btquota='sudo btrfs quota rescan /'                                                # rescan Btrfs quotas
+alias btscrub='sudo btrfs scrub status'                                                  # scrub status
+
