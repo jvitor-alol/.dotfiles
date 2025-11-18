@@ -1,6 +1,7 @@
 7zip
 alacritty
 amd-ucode
+apparmor
 ark
 asdf-vm
 aurorae
@@ -25,7 +26,6 @@ calibre
 cmatrix
 cups
 dialog
-discord
 discover
 dnsmasq
 docker
@@ -38,13 +38,11 @@ efitools
 exfatprogs
 eza
 fastfetch
-firefox
 flatpak-kcm
 fwupd
 fzf
 gamemode
 ghostscript
-gimp
 git
 gparted
 grub
@@ -86,13 +84,13 @@ kwayland
 kwin
 kwin-x11
 kwrited
+lact
 layer-shell-qt
 lazygit
 lib32-vulkan-radeon
 libkscreen
 libksysguard
 libplasma
-libreoffice-still
 linux
 linux-firmware
 linux-lts
@@ -111,7 +109,6 @@ ocean-sound-theme
 os-prober
 oxygen
 oxygen-sounds
-partitionmanager
 paru
 pika-backup
 piper
@@ -137,7 +134,6 @@ polkit-kde-agent
 powerdevil
 print-manager
 procs
-qbittorrent
 qdiskinfo
 qemu-desktop
 qqc2-breeze-style
@@ -167,8 +163,6 @@ ventoy-bin
 vi
 vim
 virt-manager
-vlc
-vlc-plugins-all
 vulkan-radeon
 wacomtablet
 wget
