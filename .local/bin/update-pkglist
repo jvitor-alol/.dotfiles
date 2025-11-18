@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Determine the real user who triggered the action.
+# SUDO_USER exists when the script is executed indirectly via sudo (e.g., pacman hooks).
+# logname is used as a fallback for login sessions.
+REAL_USER="${SUDO_USER:-$(logname)}"
+
+# Get the home directory of the real user using getent.
+REAL_HOME=$(getent passwd "$REAL_USER" | cut -d: -f6)
+
+# Generate the list of explicitly installed AUR+repo packages
+# -Q: query
+# -q: quiet (package names only)
+# -e: explicitly installed
+paru -Qqe > "$REAL_HOME/pkglist.txt"
