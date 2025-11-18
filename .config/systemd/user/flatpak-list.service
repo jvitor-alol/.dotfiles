@@ -1,0 +1,6 @@
+[Unit]
+Description=Update Flatpak package list
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/update-flatpak-list

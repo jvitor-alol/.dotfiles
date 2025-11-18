@@ -7,4 +7,8 @@ com.vscodium.codium
 io.ente.auth
 io.ente.photos
 io.github.flattool.Warehouse
+io.github.nokse22.inspector
+io.gitlab.adhami3310.Converter
+io.missioncenter.MissionCenter
 net.retrodeck.retrodeck
+org.nickvision.tubeconverter

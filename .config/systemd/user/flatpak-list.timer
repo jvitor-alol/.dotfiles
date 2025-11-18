@@ -1,0 +1,17 @@
+[Unit]
+Description=Run Flatpak list updater every 6 hours
+
+[Timer]
+# First run 5 min after boot
+OnBootSec=5m
+
+# Run every 6 hours
+OnUnitActiveSec=6h
+
+# Allow grouping with other timers to save power
+AccuracySec=5m
+
+Unit=flatpak-list.service
+
+[Install]
+WantedBy=default.target
