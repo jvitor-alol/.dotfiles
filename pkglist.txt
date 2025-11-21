@@ -91,9 +91,9 @@ lib32-vulkan-radeon
 libkscreen
 libksysguard
 libplasma
-linux
 linux-firmware
 linux-lts
+linux-zen
 lsfg-vk-git
 man-db
 man-pages
@@ -134,6 +134,7 @@ polkit-kde-agent
 powerdevil
 print-manager
 procs
+protonplus
 qdiskinfo
 qemu-desktop
 qqc2-breeze-style
