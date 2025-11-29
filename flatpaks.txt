@@ -12,7 +12,6 @@ io.github.nokse22.inspector
 io.gitlab.adhami3310.Converter
 io.gitlab.theevilskeleton.Upscaler
 io.missioncenter.MissionCenter
-net.retrodeck.retrodeck
 org.gimp.GIMP
 org.libreoffice.LibreOffice
 org.mozilla.firefox
