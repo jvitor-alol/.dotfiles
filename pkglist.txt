@@ -42,6 +42,7 @@ flatpak-kcm
 fwupd
 fzf
 gamemode
+gamescope
 ghostscript
 git
 gparted
