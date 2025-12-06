@@ -139,6 +139,7 @@ protonplus
 qdiskinfo
 qemu-desktop
 qqc2-breeze-style
+qt5-base
 reflector
 ripgrep
 sbctl
@@ -150,6 +151,7 @@ sof-firmware
 spectacle
 starship
 steam
+steamlink
 sudo
 system-config-printer
 systemsettings
