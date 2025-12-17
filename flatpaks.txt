@@ -18,3 +18,4 @@ org.mozilla.firefox
 org.nickvision.tubeconverter
 org.qbittorrent.qBittorrent
 org.videolan.VLC
+org.x.Warpinator
