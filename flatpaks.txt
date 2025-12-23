@@ -9,6 +9,7 @@ io.ente.photos
 io.github.flattool.Warehouse
 io.github.nokse22.inspector
 io.gitlab.adhami3310.Converter
+io.gitlab.librewolf-community
 io.gitlab.theevilskeleton.Upscaler
 io.missioncenter.MissionCenter
 org.gimp.GIMP
