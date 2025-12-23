@@ -6,7 +6,6 @@ ark
 asdf-vm
 aurorae
 autojump
-balena-etcher
 baobab
 base
 base-devel
