@@ -1,6 +1,7 @@
 com.discordapp.Discord
 com.github.tchx84.Flatseal
 com.leinardi.gst
+com.obsproject.Studio
 com.spotify.Client
 com.stremio.Stremio
 com.ticktick.TickTick
