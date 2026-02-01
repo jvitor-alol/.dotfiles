@@ -2,8 +2,11 @@ com.discordapp.Discord
 com.github.tchx84.Flatseal
 com.leinardi.gst
 com.spotify.Client
+com.stremio.Stremio
 com.ticktick.TickTick
+com.valvesoftware.SteamLink
 com.vscodium.codium
+com.vysp3r.ProtonPlus
 io.ente.auth
 io.ente.photos
 io.github.flattool.Warehouse
@@ -12,6 +15,7 @@ io.gitlab.adhami3310.Converter
 io.gitlab.librewolf-community
 io.gitlab.theevilskeleton.Upscaler
 io.missioncenter.MissionCenter
+org.chromium.Chromium
 org.gimp.GIMP
 org.libreoffice.LibreOffice
 org.mozilla.firefox

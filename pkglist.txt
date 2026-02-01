@@ -34,6 +34,7 @@ drkonqi
 duf
 efibootmgr
 efitools
+ex-vi-compat
 exfatprogs
 eza
 fastfetch
@@ -53,7 +54,7 @@ gst-plugins-good
 gst-plugins-ugly
 gwenview
 hdparm
-heroic-games-launcher
+heroic-games-launcher-bin
 inotify-tools
 iw
 iwd
@@ -134,7 +135,6 @@ polkit-kde-agent
 powerdevil
 print-manager
 procs
-protonplus
 qdiskinfo
 qemu-desktop
 qqc2-breeze-style
@@ -150,7 +150,6 @@ sof-firmware
 spectacle
 starship
 steam
-steamlink
 sudo
 system-config-printer
 systemsettings
@@ -163,7 +162,6 @@ unzip
 update-grub
 usbutils
 ventoy-bin
-vi
 vim
 virt-manager
 vulkan-radeon
