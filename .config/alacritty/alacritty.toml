@@ -2,7 +2,7 @@
 program = "/usr/bin/zsh"
 
 [window]
-dimensions = { columns = 95, lines = 30 }
+dimensions = { columns = 110, lines = 35 }
 opacity = 0.8
 padding.x = 15
 padding.y = 0
