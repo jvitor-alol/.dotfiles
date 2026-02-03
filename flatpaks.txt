@@ -19,8 +19,8 @@ io.missioncenter.MissionCenter
 org.chromium.Chromium
 org.gimp.GIMP
 org.libreoffice.LibreOffice
+org.localsend.localsend_app
 org.mozilla.firefox
 org.nickvision.tubeconverter
 org.qbittorrent.qBittorrent
 org.videolan.VLC
-org.x.Warpinator
