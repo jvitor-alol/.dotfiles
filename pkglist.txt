@@ -5,7 +5,6 @@ apparmor
 ark
 asdf-vm
 aurorae
-autojump
 baobab
 base
 base-devel
@@ -45,6 +44,7 @@ gamemode
 gamescope
 ghostscript
 git
+gnucash
 gparted
 grub
 grub-btrfs
@@ -89,6 +89,7 @@ lact
 layer-shell-qt
 lazygit
 lib32-vulkan-radeon
+libdbi-drivers
 libkscreen
 libksysguard
 libplasma
@@ -132,6 +133,7 @@ plasma-workspace-wallpapers
 plasma5support
 plymouth-kcm
 polkit-kde-agent
+postgresql-libs
 powerdevil
 print-manager
 procs
@@ -141,6 +143,7 @@ qqc2-breeze-style
 qt5-base
 reflector
 ripgrep
+rsync
 sbctl
 sddm
 sddm-kcm
@@ -161,6 +164,7 @@ ufw
 unzip
 update-grub
 usbutils
+uv
 ventoy-bin
 vim
 virt-manager

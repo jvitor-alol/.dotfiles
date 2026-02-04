@@ -8,10 +8,13 @@ com.ticktick.TickTick
 com.valvesoftware.SteamLink
 com.vscodium.codium
 com.vysp3r.ProtonPlus
+dev.geopjr.Collision
 io.ente.auth
 io.ente.photos
 io.github.flattool.Warehouse
+io.github.giantpinkrobots.flatsweep
 io.github.nokse22.inspector
+io.github.vikdevelop.SaveDesktop
 io.gitlab.adhami3310.Converter
 io.gitlab.librewolf-community
 io.gitlab.theevilskeleton.Upscaler
