@@ -55,5 +55,6 @@
   },
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
-  }
+  },
+  "security.workspace.trust.untrustedFiles": "open"
 }
