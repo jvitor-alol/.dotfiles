@@ -135,6 +135,7 @@ plasma5support
 plymouth-kcm
 polkit-kde-agent
 postgresql-libs
+power-profiles-daemon
 powerdevil
 print-manager
 procs
