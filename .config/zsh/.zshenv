@@ -24,6 +24,7 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages # .NET package manager
 export ASDF_DATA_DIR="$XDG_DATA_HOME"/asdf
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 
 # User-specific executable files may be stored in $HOME/.local/bin.
 # (https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
