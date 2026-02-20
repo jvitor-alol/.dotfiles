@@ -23,6 +23,7 @@ btrfs-progs
 calibre
 cmatrix
 cups
+deskflow
 dialog
 discover
 dnsmasq
