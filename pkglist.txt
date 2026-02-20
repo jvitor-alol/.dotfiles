@@ -63,6 +63,7 @@ iwd
 jq
 kactivitymanagerd
 kalk
+kamoso
 kate
 kde-cli-tools
 kde-gtk-config
