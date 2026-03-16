@@ -14,6 +14,7 @@ io.ente.photos
 io.github.flattool.Warehouse
 io.github.giantpinkrobots.flatsweep
 io.github.nokse22.inspector
+io.github.tobagin.scramble
 io.github.vikdevelop.SaveDesktop
 io.gitlab.adhami3310.Converter
 io.gitlab.librewolf-community
