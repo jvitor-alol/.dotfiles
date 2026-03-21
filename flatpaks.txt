@@ -20,6 +20,7 @@ io.gitlab.adhami3310.Converter
 io.gitlab.librewolf-community
 io.gitlab.theevilskeleton.Upscaler
 io.missioncenter.MissionCenter
+net.ankiweb.Anki
 org.chromium.Chromium
 org.gimp.GIMP
 org.libreoffice.LibreOffice
