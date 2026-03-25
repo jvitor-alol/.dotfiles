@@ -25,6 +25,7 @@ export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages # .NET package manager
 export ASDF_DATA_DIR="$XDG_DATA_HOME"/asdf
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
+export XCOMPOSEFILE="$XDG_CONFIG_HOME"/X11/xcompose
 
 # User-specific executable files may be stored in $HOME/.local/bin.
 # (https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)

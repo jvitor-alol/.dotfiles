@@ -1,0 +1,90 @@
+# =========================
+# Base
+# =========================
+include "%L"
+
+# =========================
+# Pinyin - tons via Compose
+# padrão:
+# - 1º tom: -
+# - 2º tom: '
+# - 3º tom: v
+# - 4º tom: .
+# =========================
+
+# a
+<Multi_key> <a> <minus> : "ā"
+<Multi_key> <a> <apostrophe> : "á"
+<Multi_key> <a> <v> : "ǎ"
+<Multi_key> <a> <period> : "à"
+
+# e
+<Multi_key> <e> <minus> : "ē"
+<Multi_key> <e> <apostrophe> : "é"
+<Multi_key> <e> <v> : "ě"
+<Multi_key> <e> <period> : "è"
+
+# i
+<Multi_key> <i> <minus> : "ī"
+<Multi_key> <i> <apostrophe> : "í"
+<Multi_key> <i> <v> : "ǐ"
+<Multi_key> <i> <period> : "ì"
+
+# o
+<Multi_key> <o> <minus> : "ō"
+<Multi_key> <o> <apostrophe> : "ó"
+<Multi_key> <o> <v> : "ǒ"
+<Multi_key> <o> <period> : "ò"
+
+# u
+<Multi_key> <u> <minus> : "ū"
+<Multi_key> <u> <apostrophe> : "ú"
+<Multi_key> <u> <v> : "ǔ"
+<Multi_key> <u> <period> : "ù"
+
+# ü
+<Multi_key> <u> <quotedbl> : "ü"
+<Multi_key> <u> <quotedbl> <minus> : "ǖ"
+<Multi_key> <u> <quotedbl> <apostrophe> : "ǘ"
+<Multi_key> <u> <quotedbl> <v> : "ǚ"
+<Multi_key> <u> <quotedbl> <period> : "ǜ"
+
+# =========================
+# Atalhos tipo a1 a2 a3 a4
+# =========================
+
+# a
+<Multi_key> <a> <1> : "ā"
+<Multi_key> <a> <2> : "á"
+<Multi_key> <a> <3> : "ǎ"
+<Multi_key> <a> <4> : "à"
+
+# e
+<Multi_key> <e> <1> : "ē"
+<Multi_key> <e> <2> : "é"
+<Multi_key> <e> <3> : "ě"
+<Multi_key> <e> <4> : "è"
+
+# i
+<Multi_key> <i> <1> : "ī"
+<Multi_key> <i> <2> : "í"
+<Multi_key> <i> <3> : "ǐ"
+<Multi_key> <i> <4> : "ì"
+
+# o
+<Multi_key> <o> <1> : "ō"
+<Multi_key> <o> <2> : "ó"
+<Multi_key> <o> <3> : "ǒ"
+<Multi_key> <o> <4> : "ò"
+
+# u
+<Multi_key> <u> <1> : "ū"
+<Multi_key> <u> <2> : "ú"
+<Multi_key> <u> <3> : "ǔ"
+<Multi_key> <u> <4> : "ù"
+
+# ü (u:)
+<Multi_key> <u> <colon> <1> : "ǖ"
+<Multi_key> <u> <colon> <2> : "ǘ"
+<Multi_key> <u> <colon> <3> : "ǚ"
+<Multi_key> <u> <colon> <4> : "ǜ"
