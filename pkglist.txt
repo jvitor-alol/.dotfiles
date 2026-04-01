@@ -51,7 +51,6 @@ gamescope
 ghostscript
 git
 gnucash
-gparted
 grub
 grub-btrfs
 grub-customizer
@@ -119,6 +118,7 @@ ocean-sound-theme
 os-prober
 oxygen
 oxygen-sounds
+partitionmanager
 paru
 pika-backup
 piper
