@@ -26,7 +26,7 @@ elif [[ -f /etc/arch-release ]]; then
     alias dbcheck='paru -Dk'                                                            # checks package manager for errors
     alias unlock='sudo rm /var/lib/pacman/db.lck'                                       # remove pacman lock
     alias pacconf='show /etc/pacman.conf'                                               # show /etc/pacman.conf
-    alias pacedit='$EDITOR /etc/pacman.conf'                                            # edit /etc/pacman.conf
+    alias pacedit='EDITOR=$(which $EDITOR) sudoedit /etc/pacman.conf'                   # edit /etc/pacman.conf
     ## misc. ##
     alias cat='bat'                                                                     # bat for archlinux
     alias code='flatpak run com.vscodium.codium'                                        # changes "code" to "codium"
@@ -54,14 +54,14 @@ fi
 # SYSTEM CONFIG FILES
 # ================================================================
 alias fstab='show /etc/fstab'                                                           # show /etc/fstab (with syntax highlighting)
-alias efstab='$EDITOR /etc/fstab'                                                       # edit /etc/fstab
+alias efstab='EDITOR=$(which $EDITOR) sudoedit /etc/fstab'                              # edit /etc/fstab
 alias grub='show /etc/default/grub'                                                     # show /etc/default/grub
-alias egrub='$EDITOR /etc/default/grub'                                                 # edit /etc/default/grub
+alias egrub='EDITOR=$(which $EDITOR) sudoedit /etc/default/grub'                        # edit /etc/default/grub
 alias grubbtrfs='show /boot/grub/grub-btrfs.cfg'                                        # show /boot/grub/grub-btrfs.cfg
 alias hosts='show /etc/hosts'                                                           # show /etc/hosts
 alias resolv='show /etc/resolv.conf'                                                    # show current DNS configuration
 alias envsys='show /etc/environment'                                                    # show /etc/environment
-alias eenv='$EDITOR /etc/environment'                                                   # edit /etc/environment
+alias eenv='EDITOR=$(which $EDITOR) sudoedit /etc/environment'                          # edit /etc/environment
 
 # ================================================================
 # DOTFILES GIT COMMANDS
