@@ -21,6 +21,8 @@ broot
 btrfs-assistant
 btrfs-progs
 calibre
+clamav
+clamtk
 cmatrix
 cups
 deskflow
