@@ -1,53 +1,67 @@
 # ================================================================
-# SHELL CUSTOMIZATION
-# ================================================================
-alias aliasconfig='$EDITOR $ZDOTDIR/.aliases'                                           # edit .aliases
-alias starconfig='$EDITOR $XDG_CONFIG_HOME/starship.toml'                               # edit starship.toml
-if [[ $0 == *"zsh"* ]]; then
-    # zsh customization
-    alias shconfig='$EDITOR $ZDOTDIR/.zshrc'                                            # edit .zshrc
-    alias envconfig='$EDITOR $ZDOTDIR/.zshenv'                                          # edit .zshenv
-elif [[ $0 == *"bash"* ]]; then
-    # bash customization
-    alias shconfig='$EDITOR ~/.bashrc'                                                  # edit .bashrc
-fi
-
-# System configuration files (quick view/edit)
-alias fstabview='cat /etc/fstab'                                                        # view /etc/fstab with syntax highlighting
-alias grubview='cat /etc/default/grub'                                                  # view /etc/default/grub
-alias hostview='cat /etc/hosts'                                                         # view /etc/hosts
-alias resolvview='cat /etc/resolv.conf'                                                 # view current DNS configuration
-
-# ================================================================
-# LINUX TYPE-SPECIFIC ALIASES
+# LINUX DISTRO-SPECIFIC ALIASES
 # ================================================================
 if [[ -f /etc/debian_version ]]; then
-    # aptitude package manager for Debian-based distros
+    ## aptitude package manager for Debian-based distros ##
     alias aptu='sudo apt update'                                                        # update pkgs
     alias aptg='sudo apt upgrade -y'                                                    # upgrade pkgs
     alias apti='sudo apt install'                                                       # install pkgs
     alias aptarm='sudo apt autoremove'                                                  # remove no longer needed dependencies
-    # other programs
+    ## misc. ##
     alias cat='batcat'                                                                  # batcat for debian
 elif [[ -f /etc/arch-release ]]; then
-    # pacman and paru for Arch-based distros
+    ## pacman and paru for Arch-based distros ##
     alias pacsyu='sudo pacman -Syu'                                                     # update only standard pkgs
     alias pacsyyu='sudo pacman -Syyu'                                                   # refresh pkglist & update standard pkgs
-    alias parusua='paru -Sua'                                                           # update only AUR pkgs
-    alias parusyu='paru -Syu'                                                           # update standard pkgs and AUR pkgs
+    alias parusyu='paru -Syu'                                                           # update standard pkgs and AUR pkgs (most used)
+    alias parusua='paru -Sua'                                                           # update only AUR pkgs (not recommended)
     alias parustt='paru -P --stats'                                                     # show paru stats
     alias pkglist='paru -Qqe'                                                           # lists all installed pkgs
     alias aurlist='paru -Qm'                                                            # lists only AUR pkgs
     alias pkginfo='paru -Qi'                                                            # shows information on a installed package
     alias orphans='pacman -Qtdq'                                                        # lists orphaned packages
-    alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'                                    # remove orphaned packages (DANGEROUS!)
-    alias ccache='paru -Scc'                                                            # cleans package manager cache
+    alias lateabort='orphans 2>/dev/null | xargs -r sudo pacman -Rns'                   # remove orphaned packages (DANGEROUS!)
+    alias paccache='sudo du -sh /var/cache/pacman/pkg'                                  # pacman cache disk usage
+    alias cleanup='paru -Scc'                                                           # cleans package manager cache
     alias dbcheck='paru -Dk'                                                            # checks package manager for errors
     alias unlock='sudo rm /var/lib/pacman/db.lck'                                       # remove pacman lock
-    # other programs
+    alias pacconf='show /etc/pacman.conf'                                               # show /etc/pacman.conf
+    alias pacedit='$EDITOR /etc/pacman.conf'                                            # edit /etc/pacman.conf
+    ## misc. ##
     alias cat='bat'                                                                     # bat for archlinux
     alias code='flatpak run com.vscodium.codium'                                        # changes "code" to "codium"
 fi
+
+# ================================================================
+# SHELL CUSTOMIZATION
+# ================================================================
+alias aliases='show $ZDOTDIR/.aliases'                                                  # show .aliases
+alias aliasconfig='$EDITOR $ZDOTDIR/.aliases'                                           # edit .aliases
+alias starconfig='$EDITOR $XDG_CONFIG_HOME/starship.toml'                               # edit starship.toml
+if [[ $0 == *"zsh"* ]]; then
+    ## zsh customization ##
+    alias shconfig='$EDITOR $ZDOTDIR/.zshrc'                                            # edit .zshrc
+    alias zshrc='show $ZDOTDIR/.zshrc'                                                  # show .zshrc
+    alias envconfig='$EDITOR $ZDOTDIR/.zshenv'                                          # edit .zshenv
+    alias zshenv='show $ZDOTDIR/.zshenv'                                                # show .zshenv
+elif [[ $0 == *"bash"* ]]; then
+    ## bash customization ##
+    alias shconfig='$EDITOR ~/.bashrc'                                                  # edit .bashrc
+    alias bashrc='show ~/.bashrc'                                                       # show .bashrc
+fi
+
+# ================================================================
+# SYSTEM CONFIG FILES
+# ================================================================
+alias fstab='show /etc/fstab'                                                           # show /etc/fstab (with syntax highlighting)
+alias efstab='$EDITOR /etc/fstab'                                                       # edit /etc/fstab
+alias grub='show /etc/default/grub'                                                     # show /etc/default/grub
+alias egrub='$EDITOR /etc/default/grub'                                                 # edit /etc/default/grub
+alias grubbtrfs='show /boot/grub/grub-btrfs.cfg'                                        # show /boot/grub/grub-btrfs.cfg
+alias hosts='show /etc/hosts'                                                           # show /etc/hosts
+alias resolv='show /etc/resolv.conf'                                                    # show current DNS configuration
+alias envsys='show /etc/environment'                                                    # show /etc/environment
+alias eenv='$EDITOR /etc/environment'                                                   # edit /etc/environment
 
 # ================================================================
 # DOTFILES GIT COMMANDS
@@ -59,7 +73,8 @@ alias dotdetail='dotfiles cat-file -p HEAD'                                     
 alias dotlog='dotfiles log'                                                             # git log (dotfiles)
 alias dotdiff='dotfiles diff HEAD'                                                      # git diff HEAD (dotfiles)
 alias dotadd='dotfiles add'                                                             # git add (dotfiles)
-alias dotcommit='dotfiles commit -a'                                                    # git add -u & git commit (dotfiles)
+alias dotcommit='dotfiles commit'                                                       # git commit (dotfiles)
+alias dotcommita='dotfiles commit -a'                                                   # git add -u & git commit (dotfiles)
 alias dotsync='dotfiles pull -p'                                                        # git pull -p (dotfiles)
 alias dotpush='dotfiles push origin'                                                    # git push origin (dotfiles)
 
@@ -85,6 +100,8 @@ alias glog='git log'                                                            
 alias gdetail='git cat-file -p'                                                         # displays detailed info on specified commit
 alias tag='git tag'                                                                     # list tags
 alias newtag='git tag -a'                                                               # create new tag
+alias gitconf='show $XDG_CONFIG_HOME/git/config'                                        # show git global config
+alias gitedit='$EDITOR $XDG_CONFIG_HOME/git/config'                                     # edit git global config
 
 # ================================================================
 # PROCESSES & SYSTEM TOOLS
@@ -114,44 +131,86 @@ alias l.='eza -a | rg "^\."'                                                    
 # ================================================================
 # UTILITIES & MISC
 # ================================================================
+alias pls='sudo $(fc -ln -1)'                                                           # repeats the last command with sudo
 alias cp='cp -iv'                                                                       # interactive and verbose copy
 alias mkdir='mkdir -pv'                                                                 # create directory structure
+alias show='cat --paging=never'                                                         # bat without paging
+alias pshow='cat --style=plain --paging=never'                                          # bat without paging and plain style
 alias df='df -h'                                                                        # human-readable disk space usage
 alias free='free -m'                                                                    # RAM usage, show sizes in MB
 alias hist='history -E'                                                                 # history w/ timestamps
 alias ghist='history 1 | rg'                                                            # history with ripgrep
 alias ip='ip -color=auto'                                                               # ip highlight
 alias ips='ip -c -br a'                                                                 # human-readable ip list
+alias ports='ss -tulnp'                                                                 # table of open ports
 alias py='python3'                                                                      # run python
 alias pyenv='source .venv/bin/activate'                                                 # activates python virtual environment
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'                                # XDG-Compliance for wget
-alias grep='rg'                                                                         # changes "grep" to "ripgrep" (colorize grep output // good for log files)
+alias grep='rg'                                                                         # changes "grep" to "ripgrep" (colorize grep output)
 alias vim='lvim'                                                                        # changes "vim" to "lunarvim"
-alias pls='sudo $(fc -ln -1)'                                                           # repeats the last command with sudo
 alias ff='fastfetch'                                                                    # shows system info
 
 # ================================================================
 # SYSTEMD & MAINTENANCE
 # ================================================================
+# SYSTEMCTL
 alias sc='systemctl'                                                                     # systemctl shortcut
-alias scs='systemctl status'                                                             # systemctl status view
-alias sce='systemctl list-unit-files --state=enabled'                                    # enabled systemd units
-alias scu='systemctl --user'                                                             # systemctl (user)
-alias scue='systemctl --user list-unit-files --state=enabled'                            # enabled user units
+alias scs='sc status'                                                                    # systemctl status view
+alias sce='sc list-unit-files --state=enabled'                                           # enabled systemd units
+alias scr='sc list-units --type=service --state=running'                                 # running services
+alias scf='sc --failed'                                                                  # failed services
+alias scu='sc --user'                                                                    # systemctl (user)
+alias scue='sc --user list-unit-files --state=enabled'                                   # enabled user units
+alias scltimer='sc list-timers --no-pager'                                               # show service timers
+alias scdreload='sc daemon-reload'                                                       # daemon reload
+alias screstart='sc restart'                                                             # service restart (usage: scrs <service>)
 
+# LOGS
+alias jl='journalctl -xe'                                                                # quick debug
+alias jlu='journalctl -u'                                                                # service logs (usage: jlu docker.service)
+alias jlf='journalctl -f'                                                                # follow logs
+alias jlb='journalctl -b'                                                                # logs from current boot
+alias jlp='journalctl -p 3 -xb'                                                          # only errors (priority 3)
+alias jlt='journalctl --since "today"'                                                   # logs from today
+
+# ANALYZE
+alias san='systemd-analyze'                                                              # overall boot time
+alias sanb='systemd-analyze blame | head'                                                # slowest services
+alias sanc='systemd-analyze critical-chain'                                              # dependency chain
+
+# ================================================================
+# FIREWALL
+# ================================================================
+alias ufwstat='sudo ufw status'                                                          # basic firewall status
+alias ufwdetail='sudo ufw status numbered verbose'                                       # detailed rules with numbers
+alias ufwon='sudo ufw enable'                                                            # enable firewall
+alias ufwoff='sudo ufw disable'                                                          # disable firewall
+alias ufwreload='sudo ufw reload'                                                        # reload rules without disabling
+alias ufwallow='sudo ufw allow'                                                          # allow port/service (usage: ufwallow 22)
+alias ufwdeny='sudo ufw deny'                                                            # deny port/service
+alias ufwdel='sudo ufw delete'                                                           # delete rule (usage: ufwdel <rule>)
+alias ufwlog='jlu ufw.service -b --no-pager'                                             # ufw logs (current boot)
+
+# ================================================================
+# STORAGE HEALTH
+# ================================================================
 # FSTRIM
-alias scfstr='systemctl status fstrim.timer'                                             # status of fstrim.timer
-alias jlfstr='journalctl -u fstrim.service'                                              # logs for fstrim.service
-alias jlfstrm='journalctl -u fstrim.service --since "1 month ago"'                       # fstrim logs from last month
+alias trimstat='scs fstrim.timer'                                                        # shows next scheduled trim job
+alias triml='jlu fstrim.service --since "1 week ago" --no-pager'                         # fstrim logs from last week
+alias trimlm='jlu fstrim.service --since "1 month ago" --no-pager'                       # fstrim logs from last month
+alias trimlog='jlu fstrim.service -b --no-pager'                                         # fstrim logs (current boot)
+alias trimrun='sudo fstrim -av'                                                          # run manual trim
 
 # SMARTD
-alias scsmart='systemctl status smartd.service'                                          # smartd service status
-alias jlsmart='journalctl -u smartd.service'                                             # logs for smartd.service
-alias jlsmartb='journalctl -u smartd.service -b'                                         # smartd logs (current boot)
+alias smartall='sudo smartctl -a'                                                        # smart disk report (usage: smartall /dev/nvme0n1)
+alias smartlog='jlu smartd.service -b --no-pager'                                        # smartd logs (current boot)
+alias smartstat='scs smartd.service'                                                     # smartd service status
 
 # BTRFS
 alias btsub='sudo btrfs subvolume list /'                                                # list Btrfs subvolumes
 alias btqgroup='sudo btrfs qgroup show /'                                                # qgroup info
-alias btquota='sudo btrfs quota rescan /'                                                # rescan Btrfs quotas
 alias btscrub='sudo btrfs scrub status'                                                  # scrub status
-
+alias btrescan='sudo btrfs quota rescan /'                                               # rescan Btrfs quotas
+alias scrubstat='scs btrfs-scrub@btrfs.timer btrfs-scrub@home.timer'                     # shows next scheduled scrub job
+alias scrublogr='jlu btrfs-scrub@btrfs.service --no-pager'                               # root scrub log
+alias scrublogh='jlu btrfs-scrub@home.service --no-pager'                                # home scrub log
