@@ -1,0 +1,13 @@
+[Unit]
+Description=Run system config backup daily
+
+[Timer]
+OnBootSec=10m
+OnCalendar=daily
+AccuracySec=10m
+Persistent=true
+
+Unit=system-backup.service
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,6 @@
+[Unit]
+Description=Run system config backup
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/system-backup
