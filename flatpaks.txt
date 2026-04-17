@@ -6,7 +6,6 @@ com.spotify.Client
 com.stremio.Stremio
 com.ticktick.TickTick
 com.valvesoftware.SteamLink
-com.vscodium.codium
 com.vysp3r.ProtonPlus
 dev.geopjr.Collision
 io.ente.auth

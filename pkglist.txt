@@ -178,6 +178,7 @@ uv
 ventoy-bin
 vim
 virt-manager
+vscodium-bin
 vulkan-radeon
 wacomtablet
 wget
