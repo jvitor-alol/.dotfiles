@@ -20,7 +20,7 @@
   "liveServer.settings.CustomBrowser": "chrome",
   "files.autoSave": "onWindowChange",
   "files.associations": {
-    "*.toml": "toml"
+    "*.toml": "toml",
   },
   "auto-close-tag.activationOnLanguage": [
     "xml",
@@ -30,31 +30,31 @@
     "typescript",
     "typescriptreact",
     "HTML (EEx)",
-    "HTML (Eex)"
+    "HTML (Eex)",
   ],
   "pylint.args": ["--disable=C0114", "--disable=C0115", "--disable=C0116"],
   "[python]": {
     "editor.formatOnType": true,
     "editor.defaultFormatter": "ms-python.autopep8",
     "editor.formatOnSave": true,
-    "editor.rulers": [72, 79, 99]
+    "editor.rulers": [72, 79, 99],
   },
   "[css]": {
     "editor.rulers": [
       {
         "column": 100,
-        "color": "#000"
-      }
-    ]
+        "color": "#000",
+      },
+    ],
   },
   "[git-commit]": {
-    "editor.rulers": [50, 72]
+    "editor.rulers": [50, 72],
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "vscode.typescript-language-features",
   },
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
 }
