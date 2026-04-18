@@ -153,6 +153,7 @@ qqc2-breeze-style
 qt5-base
 reflector
 ripgrep
+rkhunter
 rsync
 sbctl
 sddm
