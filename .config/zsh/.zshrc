@@ -47,9 +47,17 @@ fi
 if [ ! -e "$HISTFILE" ]; then
 	touch "$HISTFILE"
 fi
-HISTSIZE=4096
-SAVEHIST=4096
+HISTSIZE=20000
+SAVEHIST=10000
+
 setopt appendhistory
+setopt sharehistory
+setopt inc_append_history
+setopt extendedhistory
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+setopt hist_ignore_dups
+setopt hist_expire_dups_first
 
 # Arquive extraction
 ex ()		# usage: ex <file>
