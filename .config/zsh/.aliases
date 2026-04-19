@@ -62,6 +62,7 @@ alias hosts='show /etc/hosts'                                                   
 alias resolv='show /etc/resolv.conf'                                                    # show current DNS configuration
 alias envsys='show /etc/environment'                                                    # show /etc/environment
 alias eenv='EDITOR=$(which $EDITOR) sudoedit /etc/environment'                          # edit /etc/environment
+alias services='show /etc/services'                                                     # show /etc/services
 
 # ================================================================
 # DOTFILES GIT COMMANDS
