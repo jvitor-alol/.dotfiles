@@ -182,8 +182,8 @@ alias sanc='systemd-analyze critical-chain'                                     
 # ================================================================
 # FIREWALL
 # ================================================================
-alias ufwstat='sudo ufw status'                                                          # basic firewall status
-alias ufwdetail='sudo ufw status numbered verbose'                                       # detailed rules with numbers
+alias ufwstat='sudo ufw status verbose'                                                  # basic firewall status
+alias ufwdetail='sudo ufw status numbered'                                               # detailed rules with numbers
 alias ufwon='sudo ufw enable'                                                            # enable firewall
 alias ufwoff='sudo ufw disable'                                                          # disable firewall
 alias ufwreload='sudo ufw reload'                                                        # reload rules without disabling
