@@ -166,6 +166,7 @@ spectacle
 starship
 steam
 sudo
+syncthing
 system-config-printer
 systemsettings
 tldr
