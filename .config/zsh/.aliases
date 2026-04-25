@@ -20,7 +20,7 @@ elif [[ -f /etc/arch-release ]]; then
     alias aurlist='paru -Qm'                                                            # lists only AUR pkgs
     alias pkginfo='paru -Qi'                                                            # shows information on a installed package
     alias orphans='pacman -Qtdq'                                                        # lists orphaned packages
-    alias lateabort='orphans 2>/dev/null | xargs -r sudo pacman -Rns'                   # remove orphaned packages (DANGEROUS!)
+    alias lateabort='sudo pacman -Rns $(orphans)'                                       # remove orphaned packages (DANGEROUS!)
     alias paccache='sudo du -sh /var/cache/pacman/pkg'                                  # pacman cache disk usage
     alias cleanup='paru -Scc'                                                           # cleans package manager cache
     alias dbcheck='paru -Dk'                                                            # checks package manager for errors
