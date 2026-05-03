@@ -67,6 +67,7 @@ inotify-tools
 iw
 iwd
 jq
+k3b
 kactivitymanagerd
 kalk
 kamoso
