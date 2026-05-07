@@ -5,7 +5,6 @@ com.obsproject.Studio
 com.spotify.Client
 com.stremio.Stremio
 com.ticktick.TickTick
-com.valvesoftware.SteamLink
 com.vysp3r.ProtonPlus
 dev.geopjr.Collision
 io.ente.auth
@@ -28,4 +27,5 @@ org.localsend.localsend_app
 org.mozilla.firefox
 org.nickvision.tubeconverter
 org.qbittorrent.qBittorrent
+org.tenacityaudio.Tenacity
 org.videolan.VLC

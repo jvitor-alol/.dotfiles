@@ -21,6 +21,8 @@ broot
 btrfs-assistant
 btrfs-progs
 calibre
+cdrdao
+cdrtools
 clamav
 cmatrix
 cups
@@ -33,6 +35,7 @@ docker-compose
 dolphin
 drkonqi
 duf
+dvd+rw-tools
 efibootmgr
 efitools
 ex-vi-compat
@@ -123,6 +126,7 @@ oxygen
 oxygen-sounds
 partitionmanager
 paru
+picard
 pika-backup
 piper
 plasma-activities
