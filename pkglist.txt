@@ -170,6 +170,7 @@ sof-firmware
 spectacle
 starship
 steam
+strawberry
 sudo
 syncthing
 system-config-printer
