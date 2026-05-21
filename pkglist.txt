@@ -11,6 +11,7 @@ base-devel
 bash-completion
 bashtop
 bat
+bind
 bitwarden
 bluedevil
 bluez-utils
