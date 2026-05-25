@@ -13,6 +13,7 @@ io.github.flattool.Warehouse
 io.github.giantpinkrobots.flatsweep
 io.github.linx_systems.ClamUI
 io.github.nokse22.inspector
+io.github.shonebinu.Defuse
 io.github.tobagin.scramble
 io.github.vikdevelop.SaveDesktop
 io.gitlab.adhami3310.Converter
@@ -25,7 +26,6 @@ org.gimp.GIMP
 org.libreoffice.LibreOffice
 org.localsend.localsend_app
 org.mozilla.firefox
-org.nickvision.tubeconverter
 org.qbittorrent.qBittorrent
 org.tenacityaudio.Tenacity
 org.videolan.VLC
