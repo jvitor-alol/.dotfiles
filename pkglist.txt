@@ -90,6 +90,7 @@ knighttime
 konsole
 kpipewire
 krdp
+krfb
 kscreen
 kscreenlocker
 ksshaskpass
@@ -173,6 +174,7 @@ starship
 steam
 strawberry
 sudo
+sunshine
 syncthing
 system-config-printer
 systemsettings
