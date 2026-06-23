@@ -2,6 +2,7 @@
 alacritty
 amd-ucode
 apparmor
+arch-audit
 ark
 asdf-vm
 aurorae
@@ -111,6 +112,7 @@ linux-firmware
 linux-lts
 linux-zen
 lsfg-vk-git
+lynis
 man-db
 man-pages
 mangohud
