@@ -59,7 +59,6 @@ git
 gnucash
 grub
 grub-btrfs
-grub-customizer
 gst-libav
 gst-plugins-bad
 gst-plugins-good

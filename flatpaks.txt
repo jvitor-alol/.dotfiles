@@ -1,4 +1,5 @@
 com.discordapp.Discord
+com.github.ADBeveridge.Raider
 com.github.tchx84.Flatseal
 com.leinardi.gst
 com.obsproject.Studio
