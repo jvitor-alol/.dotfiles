@@ -2,6 +2,8 @@
 alacritty
 amd-ucode
 apparmor
+appmenu-gtk-module
+appmenu-gtk-module-wayland
 arch-audit
 ark
 asdf-vm
@@ -61,6 +63,7 @@ gnucash
 grub
 grub-btrfs
 gst-libav
+gst-plugin-spotify
 gst-plugins-bad
 gst-plugins-good
 gst-plugins-ugly
@@ -160,6 +163,7 @@ qdiskinfo
 qemu-desktop
 qqc2-breeze-style
 qt5-base
+quota-tools
 reflector
 ripgrep
 rkhunter
