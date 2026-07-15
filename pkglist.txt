@@ -123,6 +123,7 @@ mangohud
 mangojuice
 milou
 mpv
+mpv-mpris
 nano
 neovim
 networkmanager

@@ -28,7 +28,7 @@ playlist() {
 
 if [[ -f "$BLACKLIST" ]]; then
     exec mpv \
-        --player-operation-mode=pseudo-gui \
+        --input-ipc-server=/tmp/mpv-socket \
         --playlist=- \
         < <(
             playlist \
@@ -39,7 +39,7 @@ if [[ -f "$BLACKLIST" ]]; then
         )
 else
     exec mpv \
-        --player-operation-mode=pseudo-gui \
+        --input-ipc-server=/tmp/mpv-socket \
         --playlist=- \
         < <(
             playlist | shuf

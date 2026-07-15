@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+SOCKET="/tmp/mpv-socket"
+
+if [[ ! -S "$SOCKET" ]]; then
+    notify-send "mpv" "mpv is not running"
+    exit 1
+fi
+
+query="$*"
+
+playlist=$(
+    echo '{ "command": ["get_property", "playlist"] }' \
+    | socat - "$SOCKET"
+)
+
+index=$(
+    echo "$playlist" \
+    | jq -r --arg q "$query" '
+        .data
+        | to_entries[]
+        | select(.value.filename | ascii_downcase | contains($q | ascii_downcase))
+        | .key
+    ' \
+    | head -n1
+)
+
+if [[ -z "$index" || "$index" == "null" ]]; then
+    notify-send "mpv" "No match found: $query"
+    exit 1
+fi
+
+echo "{ \"command\": [\"playlist-play-index\", $index] }" \
+    | socat - "$SOCKET"
