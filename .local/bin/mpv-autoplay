@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+MV_DIR="$(xdg-user-dir VIDEOS)/[03] MVs"
+BLACKLIST="$HOME/.config/mpv/blacklist.txt"
+
+command -v fd >/dev/null || {
+    echo "Erro: fd not found."
+    exit 1
+}
+
+command -v mpv >/dev/null || {
+    echo "Erro: mpv not found."
+    exit 1
+}
+
+playlist() {
+    fd . "$MV_DIR" \
+        --absolute-path \
+        -e mp4 \
+        -e mkv \
+        -e webm \
+        -e ts \
+        -e mov \
+        -e m4v
+}
+
+if [[ -f "$BLACKLIST" ]]; then
+    exec mpv \
+        --player-operation-mode=pseudo-gui \
+        --playlist=- \
+        < <(
+            playlist \
+            | grep -F -v -f <(
+                grep -Ev '^\s*(#|$)' "$BLACKLIST"
+            ) \
+            | shuf
+        )
+else
+    exec mpv \
+        --player-operation-mode=pseudo-gui \
+        --playlist=- \
+        < <(
+            playlist | shuf
+        )
+fi
