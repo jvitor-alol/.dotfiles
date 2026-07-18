@@ -26,6 +26,7 @@ org.chromium.Chromium
 org.gimp.GIMP
 org.localsend.localsend_app
 org.mozilla.firefox
+org.nickvision.tubeconverter
 org.onlyoffice.desktopeditors
 org.qbittorrent.qBittorrent
 org.tenacityaudio.Tenacity
