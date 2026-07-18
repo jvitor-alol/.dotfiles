@@ -16,7 +16,7 @@
 [tag]
 	gpgSign = true
 [push]
-  autoSetupRemote = true
-[includeIf "hasconfig:local"]
-  path = ~/.config/git/local.conf
+	autoSetupRemote = true
+[include]
+	path = ~/.config/git/local.conf
 
