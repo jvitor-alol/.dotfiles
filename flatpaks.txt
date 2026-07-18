@@ -24,9 +24,9 @@ io.missioncenter.MissionCenter
 net.ankiweb.Anki
 org.chromium.Chromium
 org.gimp.GIMP
-org.libreoffice.LibreOffice
 org.localsend.localsend_app
 org.mozilla.firefox
+org.onlyoffice.desktopeditors
 org.qbittorrent.qBittorrent
 org.tenacityaudio.Tenacity
 org.videolan.VLC
