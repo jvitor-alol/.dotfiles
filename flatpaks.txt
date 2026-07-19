@@ -24,6 +24,7 @@ io.missioncenter.MissionCenter
 net.ankiweb.Anki
 org.chromium.Chromium
 org.gimp.GIMP
+org.gnome.clocks
 org.localsend.localsend_app
 org.mozilla.firefox
 org.nickvision.tubeconverter
