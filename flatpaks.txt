@@ -1,5 +1,6 @@
 com.discordapp.Discord
 com.github.ADBeveridge.Raider
+com.github.qarmin.czkawka
 com.github.tchx84.Flatseal
 com.leinardi.gst
 com.obsproject.Studio
@@ -25,6 +26,7 @@ net.ankiweb.Anki
 org.chromium.Chromium
 org.gimp.GIMP
 org.gnome.clocks
+org.kde.digikam
 org.localsend.localsend_app
 org.mozilla.firefox
 org.nickvision.tubeconverter

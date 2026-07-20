@@ -53,6 +53,7 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-qt
 fd
+ffmpegthumbs
 flatpak-kcm
 fwupd
 fzf
@@ -84,6 +85,7 @@ kde-cli-tools
 kde-gtk-config
 kdeconnect
 kdecoration
+kdegraphics-thumbnailers
 kdeplasma-addons
 kdiskmark
 kgamma
@@ -135,6 +137,7 @@ oxygen
 oxygen-sounds
 partitionmanager
 paru
+perl-image-exiftool
 picard
 pika-backup
 piper
