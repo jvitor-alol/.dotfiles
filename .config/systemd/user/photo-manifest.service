@@ -1,0 +1,12 @@
+[Unit]
+Description=Generate photo library manifest
+Documentation=man:find(1) man:sha256sum(1)
+ConditionPathIsDirectory=%h/Pictures
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/photo-manifest
+Environment=PHOTO_ROOT=%h/Pictures
+SyslogIdentifier=photo-manifest
+Nice=10
+IOSchedulingClass=idle

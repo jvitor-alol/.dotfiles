@@ -1,0 +1,194 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+ROOT_INPUT="${PHOTO_ROOT:-$HOME/Pictures}"
+START_SECONDS=$SECONDS
+
+TMP_REPORT=""
+LOCK_FILE="${XDG_RUNTIME_DIR:-/tmp}/photo-manifest-${UID}.lock"
+
+log_info() {
+    printf '[INFO] %s\n' "$*"
+}
+
+log_error() {
+    printf '[ERROR] %s\n' "$*" >&2
+}
+
+cleanup() {
+    if [[ -n "$TMP_REPORT" ]]; then
+        rm -f -- "$TMP_REPORT"
+    fi
+}
+
+escape_path() {
+    local path=$1
+
+    path=${path//\\/\\\\}
+    path=${path//$'\n'/\\n}
+    path=${path//$'\r'/\\r}
+    path=${path//$'\t'/\\t}
+
+    printf '%s\n' "$path"
+}
+
+trap cleanup EXIT
+
+if [[ ! -d "$ROOT_INPUT" ]]; then
+    log_error "Library directory does not exist: $ROOT_INPUT"
+    exit 1
+fi
+
+ROOT="$(realpath -e -- "$ROOT_INPUT")"
+REPORT_INPUT="${PHOTO_MANIFEST:-$ROOT/MANIFEST.txt}"
+
+if [[ "$REPORT_INPUT" == /* ]]; then
+    REPORT="$(realpath -m -- "$REPORT_INPUT")"
+else
+    REPORT="$(realpath -m -- "$ROOT/$REPORT_INPUT")"
+fi
+
+REPORT_DIR="$(dirname -- "$REPORT")"
+REPORT_NAME="$(basename -- "$REPORT")"
+
+if [[ ! -d "$REPORT_DIR" ]]; then
+    log_error "Report directory does not exist: $REPORT_DIR"
+    exit 1
+fi
+
+exec 9>"$LOCK_FILE"
+
+if ! flock -n 9; then
+    log_info "Another manifest generation is already running; exiting."
+    exit 0
+fi
+
+log_info "Starting photo library manifest generation."
+log_info "Library root: $ROOT"
+log_info "Report path: $REPORT"
+log_info "Scanning files and excluding all .dtrash directories."
+
+REL_REPORT=""
+
+if [[ "$REPORT" == "$ROOT/"* ]]; then
+    REL_REPORT="${REPORT#"$ROOT/"}"
+fi
+
+FILES=()
+
+while IFS= read -r -d '' path; do
+    if [[ -n "$REL_REPORT" && "$path" == "$REL_REPORT" ]]; then
+        continue
+    fi
+
+    FILES+=("$path")
+done < <(
+    find "$ROOT" \
+        -type d -name '.dtrash' -prune -o \
+        -type f -printf '%P\0' |
+        LC_ALL=C sort -z
+)
+
+TOTAL_FILES=${#FILES[@]}
+
+log_info "File scan completed: $TOTAL_FILES files found."
+log_info "Calculating SHA-256 from the sorted relative path list."
+
+PATH_LIST_HASH="$(
+    {
+        for path in "${FILES[@]}"; do
+            printf '%s\0' "$path"
+        done
+    } |
+        sha256sum |
+        awk '{print $1}'
+)"
+
+log_info "Path-list SHA-256 calculated: $PATH_LIST_HASH"
+
+declare -A EXTENSION_COUNTS=()
+
+for path in "${FILES[@]}"; do
+    filename=${path##*/}
+
+    if [[ "$filename" != *.* || "$filename" == *. ]]; then
+        extension="(no extension)"
+    elif [[ "$filename" == .* && "${filename:1}" != *.* ]]; then
+        extension="(no extension)"
+    else
+        extension=${filename##*.}
+        extension=${extension,,}
+    fi
+
+    ((EXTENSION_COUNTS["$extension"] += 1))
+done
+
+EXTENSION_CATEGORIES=${#EXTENSION_COUNTS[@]}
+
+log_info \
+    "Extension summary completed: $EXTENSION_CATEGORIES categories found."
+
+log_info "Writing manifest to a temporary file."
+
+TMP_REPORT="$(
+    mktemp "$REPORT_DIR/.${REPORT_NAME}.tmp.XXXXXX"
+)"
+
+{
+    printf '%s\n' 'PHOTO LIBRARY MANIFEST'
+    printf '%s\n' '======================'
+    printf '\n'
+
+    printf 'Generated at: %s\n' "$(date --iso-8601=seconds)"
+    printf 'Library root: %s\n' "$ROOT"
+    printf 'Total files: %d\n' "$TOTAL_FILES"
+    printf 'Extension categories: %d\n' "$EXTENSION_CATEGORIES"
+    printf 'Path-list SHA-256: %s\n' "$PATH_LIST_HASH"
+    printf 'Hash scope: sorted relative paths separated by NUL bytes\n'
+    printf 'Excluded: the manifest file and all .dtrash directories\n'
+
+    printf '\n'
+    printf '%s\n' 'FILE COUNT BY EXTENSION'
+    printf '%s\n' '-----------------------'
+
+    if (( EXTENSION_CATEGORIES == 0 )); then
+        printf '%s\n' '(no files)'
+    else
+        for extension in "${!EXTENSION_COUNTS[@]}"; do
+            printf \
+                '%8d  %s\n' \
+                "${EXTENSION_COUNTS[$extension]}" \
+                "$extension"
+        done |
+            LC_ALL=C sort -k1,1nr -k2,2
+    fi
+
+    printf '\n'
+    printf '%s\n' 'FILE LIST'
+    printf '%s\n' '---------'
+
+    if (( TOTAL_FILES == 0 )); then
+        printf '%s\n' '(no files)'
+    else
+        for path in "${FILES[@]}"; do
+            escape_path "$path"
+        done
+    fi
+} > "$TMP_REPORT"
+
+chmod 0644 -- "$TMP_REPORT"
+
+mv -f -- "$TMP_REPORT" "$REPORT"
+TMP_REPORT=""
+
+if [[ ! -f "$REPORT" ]]; then
+    log_error "Manifest file was not created: $REPORT"
+    exit 1
+fi
+
+ELAPSED_SECONDS=$((SECONDS - START_SECONDS))
+
+log_info "Manifest updated successfully: $REPORT"
+log_info "Recorded files: $TOTAL_FILES"
+log_info "Completed in ${ELAPSED_SECONDS}s."
