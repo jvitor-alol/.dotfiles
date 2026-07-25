@@ -6,7 +6,6 @@ com.leinardi.gst
 com.obsproject.Studio
 com.spotify.Client
 com.stremio.Stremio
-com.ticktick.TickTick
 com.vysp3r.ProtonPlus
 dev.geopjr.Collision
 io.ente.auth
