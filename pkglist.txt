@@ -189,6 +189,7 @@ sunshine
 syncthing
 system-config-printer
 systemsettings
+tailscale
 tldr
 tpm2-tools
 tree
