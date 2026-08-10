@@ -8,6 +8,7 @@ com.spotify.Client
 com.stremio.Stremio
 com.vysp3r.ProtonPlus
 dev.geopjr.Collision
+fr.handbrake.ghb
 io.ente.auth
 io.ente.photos
 io.github.flattool.Warehouse
