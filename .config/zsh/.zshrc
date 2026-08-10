@@ -27,7 +27,6 @@ zstyle ':omz:update' mode reminder
 # Oh My Zsh plugins
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  asdf
   zsh-autosuggestions
   zsh-syntax-highlighting
   you-should-use

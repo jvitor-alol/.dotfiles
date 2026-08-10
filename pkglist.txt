@@ -6,7 +6,6 @@ appmenu-gtk-module
 appmenu-gtk-module-wayland
 arch-audit
 ark
-asdf-vm
 aurorae
 baobab
 base
@@ -117,7 +116,6 @@ libplasma
 linux-firmware
 linux-lts
 linux-zen
-lsfg-vk-git
 lynis
 man-db
 man-pages
