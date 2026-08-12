@@ -22,7 +22,6 @@ export WINEPREFIX="$XDG_DATA_HOME"/wine
 export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages # .NET package manager
-export ASDF_DATA_DIR="$XDG_DATA_HOME"/asdf
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 export XCOMPOSEFILE="$XDG_CONFIG_HOME"/X11/xcompose

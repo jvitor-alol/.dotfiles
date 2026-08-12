@@ -26,7 +26,7 @@ elif [[ -f /etc/arch-release ]]; then
     alias dbcheck='paru -Dk'                                                            # checks package manager for errors
     alias unlock='sudo rm /var/lib/pacman/db.lck'                                       # remove pacman lock
     alias pacconf='show /etc/pacman.conf'                                               # show /etc/pacman.conf
-    alias pacedit='EDITOR=$(which $EDITOR) sudoedit /etc/pacman.conf'                   # edit /etc/pacman.conf
+    alias pacedit='sudoedit /etc/pacman.conf'                   # edit /etc/pacman.conf
     ## misc. ##
     alias cat='bat'                                                                     # bat for archlinux
     alias code='codium'                                                                 # changes "code" to "codium"
@@ -54,14 +54,14 @@ fi
 # SYSTEM CONFIG FILES
 # ================================================================
 alias fstab='show /etc/fstab'                                                           # show /etc/fstab (with syntax highlighting)
-alias efstab='EDITOR=$(which $EDITOR) sudoedit /etc/fstab'                              # edit /etc/fstab
+alias efstab='sudoedit /etc/fstab'                              # edit /etc/fstab
 alias grub='show /etc/default/grub'                                                     # show /etc/default/grub
-alias egrub='EDITOR=$(which $EDITOR) sudoedit /etc/default/grub'                        # edit /etc/default/grub
+alias egrub='sudoedit /etc/default/grub'                        # edit /etc/default/grub
 alias grubbtrfs='show /boot/grub/grub-btrfs.cfg'                                        # show /boot/grub/grub-btrfs.cfg
 alias hosts='show /etc/hosts'                                                           # show /etc/hosts
 alias resolv='show /etc/resolv.conf'                                                    # show current DNS configuration
 alias envsys='show /etc/environment'                                                    # show /etc/environment
-alias eenv='EDITOR=$(which $EDITOR) sudoedit /etc/environment'                          # edit /etc/environment
+alias eenv='sudoedit /etc/environment'                          # edit /etc/environment
 alias services='show /etc/services'                                                     # show /etc/services
 
 # ================================================================
@@ -108,7 +108,6 @@ alias gitedit='$EDITOR $XDG_CONFIG_HOME/git/config'                             
 # PROCESSES & SYSTEM TOOLS
 # ================================================================
 alias psa='ps auxf'                                                                     # displays a hierarchical view of running processes
-alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'                                # filters the process list to show lines that include "VSZ"
 alias psmem='ps auxf | sort -nr -k 4'                                                   # processes listed in descending order based on memory usage
 alias pscpu='ps auxf | sort -nr -k 3'                                                   # processes listed in descending order based on CPU usage
 alias fzfh='history 1 | fzf'                                                            # fuzzy search through shell history
@@ -147,9 +146,8 @@ alias ports='ss -tulnp'                                                         
 alias py='python3'                                                                      # run python
 alias pyenv='source .venv/bin/activate'                                                 # activates python virtual environment
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'                                # XDG-Compliance for wget
-alias grep='rg'                                                                         # changes "grep" to "ripgrep" (colorize grep output)
-alias vim='lvim'                                                                        # changes "vim" to "lunarvim"
 alias ff='fastfetch'                                                                    # shows system info
+alias hx='helix'                                                                        # add helix default command
 
 # ================================================================
 # SYSTEMD & MAINTENANCE

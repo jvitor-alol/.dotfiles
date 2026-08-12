@@ -4,7 +4,7 @@
 [color]
 	ui = true
 [core]
-	editor = lvim
+	editor = $EDITOR
 [init]
 	defaultBranch = main
 [pager]

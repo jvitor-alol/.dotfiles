@@ -11,21 +11,15 @@
 #|-------------------------------------------------------------------------|#
 #############################################################################
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='lvim'
-else
-  export EDITOR='lvim'
-fi
+# Preferred editor
+export EDITOR='helix'
+export VISUAL='helix'
+export SUDO_EDITOR='helix'
 
 # Update reminder
 zstyle ':omz:update' mode reminder
 
-# Default theme
-# ZSH_THEME="af-magic"
-
 # Oh My Zsh plugins
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -34,7 +28,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Zcompdump location // doesn't really work with oh-my-zsh installed
+# Zcompdump location
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 ######## USER CONFIGURATION ########
@@ -88,9 +82,6 @@ ex ()		# usage: ex <file>
 if [ -f $ZDOTDIR/.aliases ]; then
     . $ZDOTDIR/.aliases
 fi
-
-# Broot launcher
-source /home/bossun/.config/broot/launcher/bash/br
 
 # Starship prompt
 eval "$(starship init zsh)"
