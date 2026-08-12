@@ -30,47 +30,16 @@ Install `flatpaks`
 curl -fsSL https://raw.githubusercontent.com/jvitor-alol/.dotfiles/refs/heads/main/flatpaks.txt | xargs -n1 flatpak install -y flathub
 ```
 
-Install [LunarVim](https://www.lunarvim.org/docs/installation)
-```console
-LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
-```
-
-
-[Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
-```console
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-OMZ Plugins
-```console
-git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
-ln -s /usr/share/zsh/plugins/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-ln -s /usr/share/zsh/plugins/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-```
-
-[ASDF](https://github.com/asdf-vm/asdf) plugins
-```console
-asdf plugin add python;
-asdf plugin add nodejs;
-asdf install
-```
-
 ## Cloning dotfiles
 
-Add bare repo alias to bashrc **OR** zshrc
+Add bare repo alias to bashrc
 ```console
 echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.bashrc
 ```
-```console
-echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'" >> $HOME/.zshrc
-```
 
-Source bashrc **OR** zshrc
+Source bashrc
 ```console
 source ~/.bashrc
-```
-```console
-source ~/.zshrc
 ```
 
 Clone bare repo
@@ -115,13 +84,6 @@ Force checkout
 dotfiles checkout -f
 ```
 
-## Check for XDG compliant HOME
-
-Install [XDG-Ninja](https://github.com/b3nj5m1n/xdg-ninja) (AUR)
-```console
-parusua xdg-ninja
-```
-
 ## VSCodium extensions
 
 To list installed extensions
@@ -146,3 +108,4 @@ code --install-extension <ext-id | path>
 
 [GPG + Git basics: How to generate keys, sign commits, and export keys to another machine](https://aalonso.dev/blog/2022/how-to-generate-gpg-keys-sign-commits-and-export-keys-to-another-machine)
 
+[XDG-Ninja](https://github.com/b3nj5m1n/xdg-ninja) (AUR)
