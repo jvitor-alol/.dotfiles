@@ -20,7 +20,6 @@ bluez-utils
 breeze
 breeze-gtk
 breeze-plymouth
-broot
 btrfs-assistant
 btrfs-progs
 calibre
@@ -70,6 +69,7 @@ gst-plugins-good
 gst-plugins-ugly
 gwenview
 hdparm
+helix
 heroic-games-launcher-bin
 inotify-tools
 iw
