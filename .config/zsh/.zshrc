@@ -15,8 +15,19 @@ compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 # Zsh history substring search
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+# Terminal keybindings
+[[ -n "${terminfo[khome]}" ]] && bindkey "${terminfo[khome]}" beginning-of-line
+[[ -n "${terminfo[kend]}"  ]] && bindkey "${terminfo[kend]}"  end-of-line
+[[ -n "${terminfo[kdch1]}" ]] && bindkey "${terminfo[kdch1]}" delete-char
+[[ -n "${terminfo[kich1]}" ]] && bindkey "${terminfo[kich1]}" overwrite-mode
+[[ -n "${terminfo[kpp]}"   ]] && bindkey "${terminfo[kpp]}"   up-history
+[[ -n "${terminfo[knp]}"   ]] && bindkey "${terminfo[knp]}"   down-history
+[[ -n "${terminfo[kcuu1]}" ]] && bindkey "${terminfo[kcuu1]}" history-substring-search-up
+[[ -n "${terminfo[kcud1]}" ]] && bindkey "${terminfo[kcud1]}" history-substring-search-down
+[[ -n "${terminfo[kcbt]}"  ]] && bindkey "${terminfo[kcbt]}"  reverse-menu-complete
+
+bindkey '^?' backward-delete-char
+bindkey ' ' magic-space
 
 # Zsh autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -43,8 +54,8 @@ setopt hist_ignore_dups
 setopt hist_expire_dups_first
 
 # Aliases
-if [ -f "$ZDOTDIR/.aliases" ]; then
-    . "$ZDOTDIR/.aliases"
+if [ -f "$ZDOTDIR/aliases.zsh" ]; then
+    . "$ZDOTDIR/aliases.zsh"
 fi
 
 # Starship prompt

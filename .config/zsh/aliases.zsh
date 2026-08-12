@@ -1,4 +1,4 @@
-# ~/.config/zsh/.aliases
+# ~/.config/zsh/aliases.zsh
 # ================================================================
 # LINUX DISTRO-SPECIFIC ALIASES
 # ================================================================
@@ -36,8 +36,8 @@ fi
 # ================================================================
 # SHELL CUSTOMIZATION
 # ================================================================
-alias aliases='show $ZDOTDIR/.aliases'                                                  # show .aliases
-alias aliasconfig='$EDITOR $ZDOTDIR/.aliases'                                           # edit .aliases
+alias aliases='show $ZDOTDIR/aliases.zsh'                                               # show aliases.zsh
+alias aliasconfig='$EDITOR $ZDOTDIR/aliases.zsh'                                        # edit .aliases
 alias starconfig='$EDITOR $XDG_CONFIG_HOME/starship.toml'                               # edit starship.toml
 if [[ $0 == *"zsh"* ]]; then
     ## zsh customization ##
