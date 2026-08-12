@@ -1,2 +1,4 @@
+# ~/.config/helix/config.toml
+
 theme = "focus_nova"
 

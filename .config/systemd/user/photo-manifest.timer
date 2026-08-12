@@ -1,3 +1,5 @@
+# ~/.config/systemd/user/photo-manifest.timer
+
 [Unit]
 Description=Periodically update the photo library manifest
 

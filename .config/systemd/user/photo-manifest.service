@@ -1,3 +1,5 @@
+# ~/.config/systemd/user/photo-manifest.service
+
 [Unit]
 Description=Generate photo library manifest
 Documentation=man:find(1) man:sha256sum(1)

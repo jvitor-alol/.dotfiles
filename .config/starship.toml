@@ -1,4 +1,5 @@
-# Best font - Cousine Nerd Font (https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Cousine.zip)
+# ~/.config/starship.toml
+
 format = """
 [░▒▓](#a3aed2)\
 [ $os ](bg:#a3aed2 fg:#090c0c)\

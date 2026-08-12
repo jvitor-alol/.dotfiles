@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# ~/.local/bin/sunshine-start-vmon.sh
+
 WIDTH="${SUNSHINE_CLIENT_WIDTH:-1920}"
 HEIGHT="${SUNSHINE_CLIENT_HEIGHT:-1080}"
 FPS="${SUNSHINE_CLIENT_FPS%.*}"

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# ~/.local/bin/sunshine-stop-vmon.sh
+
 # Kill virtual display
 if [ -f /tmp/sunshine-vmon.pid ]; then
   kill "$(cat /tmp/sunshine-vmon.pid)" 2>/dev/null || true

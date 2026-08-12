@@ -1,2 +1,4 @@
+# ~/.config/git/ignore
+
 # Avoid recursive issues
 .dotfiles

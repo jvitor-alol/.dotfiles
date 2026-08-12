@@ -1,4 +1,5 @@
 # ~/.config/zsh/.zshenv
+
 # Add following line to /etc/zsh/zshenv
 export ZDOTDIR=$HOME/.config/zsh
 

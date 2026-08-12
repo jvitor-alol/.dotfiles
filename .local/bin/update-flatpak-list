@@ -1,3 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# ~/.local/bin/update-flatpak-list
+
 # Generate the list of installed Flatpak applications
 flatpak list --columns=application --app > "$HOME/flatpaks.txt"

@@ -1,3 +1,5 @@
+# ~/.config/systemd/user/flatpak-list.service
+
 [Unit]
 Description=Update Flatpak package list
 

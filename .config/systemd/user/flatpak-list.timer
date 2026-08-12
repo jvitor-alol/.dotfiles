@@ -1,3 +1,5 @@
+# ~/.config/systemd/user/flatpak-list.timer
+
 [Unit]
 Description=Run Flatpak list updater every 6 hours
 

@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# ~/.local/bin/update-pkglist
 
 # Determine the real user who triggered the action.
 # SUDO_USER exists when the script is executed indirectly via sudo (e.g., pacman hooks).

@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# ~/.local/bin/game-stack
+
 exec gamescope \
 -f \
 -w 1920 -h 1080 \
