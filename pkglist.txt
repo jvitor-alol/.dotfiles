@@ -213,7 +213,6 @@ xdg-desktop-portal-kde
 xdg-ninja
 zip
 zsh
-zsh-autocomplete
 zsh-autosuggestions
 zsh-completions
 zsh-history-substring-search

@@ -1,3 +1,4 @@
+# ~/.config/zsh/.zshenv
 # Add following line to /etc/zsh/zshenv
 export ZDOTDIR=$HOME/.config/zsh
 
@@ -8,7 +9,6 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
 # XDG-Ninja recommendations
-export ZSH="$XDG_DATA_HOME"/oh-my-zsh
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
