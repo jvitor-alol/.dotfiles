@@ -27,27 +27,22 @@ playlist() {
         -e m4v
 }
 
-if [[ -f "$BLACKLIST" ]]; then
-    exec mpv \
-        --input-ipc-server=/tmp/mpv-socket \
-        --log-file="$LOG_FILE" \
-        --msg-level=all=v \
-        --playlist=- \
-        < <(
-            playlist \
+filtered_playlist() {
+    if [[ -f "$BLACKLIST" ]]; then
+        playlist \
             | grep -F -v -f <(
                 grep -Ev '^\s*(#|$)' "$BLACKLIST"
-            ) \
-            | shuf
-        )
-else
-    exec mpv \
-        --input-ipc-server=/tmp/mpv-socket \
-        --log-file="$LOG_FILE" \
-        --msg-level=all=v \
-        --playlist=- \
-        < <(
-            playlist | shuf
-        )
-fi
+            )
+    else
+        playlist
+    fi
+}
 
+exec env MANGOHUD=0 mpv \
+    --input-ipc-server=/tmp/mpv-socket \
+    --log-file="$LOG_FILE" \
+    --msg-level=all=v \
+    --playlist=- \
+    < <(
+        filtered_playlist | shuf
+    )
