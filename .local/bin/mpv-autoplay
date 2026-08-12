@@ -4,6 +4,7 @@ set -euo pipefail
 
 MV_DIR="$(xdg-user-dir VIDEOS)/[03] MVs"
 BLACKLIST="$HOME/.config/mpv/blacklist.txt"
+LOG_FILE="/tmp/mpv-autoplay.log"
 
 command -v fd >/dev/null || {
     echo "Erro: fd not found."
@@ -29,6 +30,8 @@ playlist() {
 if [[ -f "$BLACKLIST" ]]; then
     exec mpv \
         --input-ipc-server=/tmp/mpv-socket \
+        --log-file="$LOG_FILE" \
+        --msg-level=all=v \
         --playlist=- \
         < <(
             playlist \
@@ -40,8 +43,11 @@ if [[ -f "$BLACKLIST" ]]; then
 else
     exec mpv \
         --input-ipc-server=/tmp/mpv-socket \
+        --log-file="$LOG_FILE" \
+        --msg-level=all=v \
         --playlist=- \
         < <(
             playlist | shuf
         )
 fi
+
