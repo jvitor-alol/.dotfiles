@@ -1,0 +1,13 @@
+# ~/.config/systemd/user/kvm-display-switch.service
+
+[Unit]
+Description=Monitor KVM HDMI hotplug and manage display DPMS
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/kvm-display-switch
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target

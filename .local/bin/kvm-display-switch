@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# ~/.local/bin/kvm-display-switch
+
+HDMI_STATUS="/sys/class/drm/card1-HDMI-A-1/status"
+
+[[ -r "$HDMI_STATUS" ]] || exit 1
+
+previous="$(cat "$HDMI_STATUS")"
+
+echo "Initial status: $previous"
+
+udevadm monitor --udev --subsystem-match=drm |
+while IFS= read -r event; do
+    [[ "$event" == *" change "* ]] || continue
+    [[ -r "$HDMI_STATUS" ]] || continue
+
+    sleep 0.5
+
+    current="$(cat "$HDMI_STATUS")"
+
+    # Ignore DRM events that didn't change the HDMI status.
+    [[ "$current" == "$previous" ]] && continue
+
+    echo "HDMI: $previous -> $current"
+
+    if [[ "$previous" == "connected" && "$current" == "disconnected" ]]; then
+        echo "KVM switched from PC: DPMS off"
+        kscreen-doctor --dpms off
+    fi
+
+    previous="$current"
+done
