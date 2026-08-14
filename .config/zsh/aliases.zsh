@@ -117,6 +117,7 @@ alias fzfh='history 1 | fzf'                                                    
 # ================================================================
 # NAVIGATION
 # ================================================================
+alias -- -='cd -'                                                                       # moves to previous folder
 alias ..='cd ..'                                                                        # moves up 1 folder
 alias ...='cd ../..'                                                                    # moves up 2 folders
 alias ....='cd ../../..'                                                                # moves up 3 folders

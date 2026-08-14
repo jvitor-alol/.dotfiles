@@ -13,6 +13,20 @@ fi
 autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 
+# Completion matching
+zstyle ':completion:*' matcher-list \
+    'm:{a-zA-Z}={A-Za-z}' \
+    'r:|[._-]=* r:|=*'
+
+# Interactive completion menu
+zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
+zstyle ':completion:*:warnings' format '%F{red}no matches found%f'
+zstyle ':completion:*' squeeze-slashes true
+
 # Zsh history substring search
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
@@ -65,6 +79,7 @@ fi
 HISTSIZE=20000
 SAVEHIST=10000
 
+# Zsh options
 setopt appendhistory
 setopt sharehistory
 setopt inc_append_history
@@ -73,6 +88,9 @@ setopt hist_ignore_space
 setopt hist_reduce_blanks
 setopt hist_ignore_dups
 setopt hist_expire_dups_first
+setopt auto_cd
+setopt interactive_comments
+setopt rm_star_wait
 
 # Aliases
 if [ -f "$ZDOTDIR/aliases.zsh" ]; then
