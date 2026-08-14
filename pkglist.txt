@@ -28,7 +28,6 @@ cdrtools
 clamav
 cmatrix
 cups
-deskflow
 dialog
 discover
 dnsmasq
