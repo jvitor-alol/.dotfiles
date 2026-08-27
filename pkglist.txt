@@ -161,6 +161,7 @@ power-profiles-daemon
 powerdevil
 print-manager
 procs
+proton-vpn-cli
 qdiskinfo
 qemu-desktop
 qqc2-breeze-style
