@@ -27,7 +27,6 @@ cdrdao
 cdrtools
 clamav
 cmatrix
-cups
 dialog
 discover
 dnsmasq
