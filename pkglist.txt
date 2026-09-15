@@ -124,6 +124,7 @@ mpv
 mpv-mpris
 nano
 neovim
+nethogs
 networkmanager
 noto-fonts-cjk
 ntfs-3g

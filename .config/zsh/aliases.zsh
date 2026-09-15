@@ -146,6 +146,7 @@ alias ghist='history 1 | rg'                                                    
 alias ip='ip -color=auto'                                                               # ip highlight
 alias ips='ip -c -br a'                                                                 # human-readable ip list
 alias ports='ss -tulnp'                                                                 # table of open ports
+alias conn='ss -tnp state established'                                                  # shows established TCP connections
 alias py='python3'                                                                      # run python
 alias pyenv='source .venv/bin/activate'                                                 # activates python virtual environment
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'                                # XDG-Compliance for wget
