@@ -38,6 +38,7 @@ duf
 dvd+rw-tools
 efibootmgr
 efitools
+ethtool
 ex-vi-compat
 exfatprogs
 eza
@@ -192,6 +193,7 @@ tpm2-tools
 tree
 ttf-cousine-nerd
 ufw
+unrar
 unzip
 update-grub
 usbutils
