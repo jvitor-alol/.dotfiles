@@ -42,7 +42,6 @@ ethtool
 ex-vi-compat
 exfatprogs
 eza
-fail2ban
 fastfetch
 fcitx5
 fcitx5-chinese-addons
