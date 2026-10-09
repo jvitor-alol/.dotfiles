@@ -25,7 +25,8 @@ playlist() {
         -e webm \
         -e ts \
         -e mov \
-        -e m4v
+        -e m4v \
+        -e avi
 }
 
 filtered_playlist() {
