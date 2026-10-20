@@ -85,7 +85,6 @@ kdecoration
 kdegraphics-thumbnailers
 kdeplasma-addons
 kdiskmark
-kgamma
 kglobalacceld
 kinfocenter
 kmenuedit
@@ -101,7 +100,6 @@ ksystemstats
 kwallet-pam
 kwayland
 kwin
-kwin-x11
 kwrited
 lact
 layer-shell-qt
@@ -132,6 +130,7 @@ ocean-sound-theme
 os-prober
 oxygen
 oxygen-sounds
+pacman-contrib
 partitionmanager
 paru
 perl-image-exiftool
@@ -202,7 +201,6 @@ vim
 virt-manager
 vscodium-bin
 vulkan-radeon
-wacomtablet
 wget
 wine-mono
 wine-staging
