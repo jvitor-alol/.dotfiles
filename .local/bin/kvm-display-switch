@@ -3,10 +3,29 @@
 
 HDMI_STATUS="/sys/class/drm/card1-HDMI-A-1/status"
 
-[[ -r "$HDMI_STATUS" ]] || exit 1
+refresh_session_env() {
+    local env name value
+
+    env="$(systemctl --user show-environment)" || return 1
+
+    while IFS='=' read -r name value; do
+        case "$name" in
+            WAYLAND_DISPLAY|DISPLAY|XAUTHORITY|XDG_RUNTIME_DIR|DBUS_SESSION_BUS_ADDRESS|XDG_CURRENT_DESKTOP)
+                printf -v "$name" '%s' "$value"
+                export "$name"
+                ;;
+        esac
+    done <<< "$env"
+
+    [[ -n "${WAYLAND_DISPLAY:-}" && -n "${XDG_RUNTIME_DIR:-}" ]]
+}
+
+if [[ ! -r "$HDMI_STATUS" ]]; then
+    echo "Erro: não foi possível ler $HDMI_STATUS"
+    exit 1
+fi
 
 previous="$(cat "$HDMI_STATUS")"
-
 echo "Initial status: $previous"
 
 udevadm monitor --udev --subsystem-match=drm |
@@ -15,7 +34,6 @@ while IFS= read -r event; do
     [[ -r "$HDMI_STATUS" ]] || continue
 
     sleep 0.5
-
     current="$(cat "$HDMI_STATUS")"
 
     # Ignore DRM events that didn't change the HDMI status.
@@ -25,7 +43,17 @@ while IFS= read -r event; do
 
     if [[ "$previous" == "connected" && "$current" == "disconnected" ]]; then
         echo "KVM switched from PC: DPMS off"
-        kscreen-doctor --dpms off
+
+        if refresh_session_env; then
+            echo "WAYLAND_DISPLAY=$WAYLAND_DISPLAY"
+            echo "DISPLAY=${DISPLAY:-UNSET}"
+
+            kscreenctl off
+            status=$?
+            echo "kscreenctl exit status: $status"
+        else
+            echo "Erro: ambiente gráfico indisponível; DPMS não executado."
+        fi
     fi
 
     previous="$current"
