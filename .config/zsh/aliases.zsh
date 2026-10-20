@@ -152,6 +152,7 @@ alias pyenv='source .venv/bin/activate'                                         
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'                                # XDG-Compliance for wget
 alias ff='fastfetch'                                                                    # shows system info
 alias hx='helix'                                                                        # add helix default command
+alias windows='sudo grub-reboot 2; reboot'                                              # next boot directly into Windows
 
 # ================================================================
 # SYSTEMD & MAINTENANCE
