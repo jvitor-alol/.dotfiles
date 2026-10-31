@@ -209,7 +209,7 @@ wireless_tools
 wl-clipboard
 wpa_supplicant
 xdg-desktop-portal-kde
-xdg-ninja
+xdg-ninja-git
 zip
 zsh
 zsh-autosuggestions
